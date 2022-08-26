@@ -1,0 +1,1 @@
+module Alu #(parameter N=4)(input [N-1:0] A, input [N-1:0] B, output [9:0] SSum, SRest, SMod, SMult, SDiv, SAnd, SOr, SXor, SLeftS, SRightS)

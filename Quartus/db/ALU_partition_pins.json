@@ -1,0 +1,145 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "SSum[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SSum[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SSum[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SSum[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SRest[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SRest[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SRest[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SRest[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SMod[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SMod[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SMod[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SMod[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SMult[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SMult[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SMult[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SMult[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SDiv[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SDiv[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SDiv[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SDiv[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SAnd[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SOr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SXor[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SXor[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SXor[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SXor[3]",
+					"strict" : false
+				},
+				{
+					"name" : "A[0]",
+					"strict" : false
+				},
+				{
+					"name" : "A[1]",
+					"strict" : false
+				},
+				{
+					"name" : "B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "B[2]",
+					"strict" : false
+				},
+				{
+					"name" : "A[2]",
+					"strict" : false
+				},
+				{
+					"name" : "A[3]",
+					"strict" : false
+				},
+				{
+					"name" : "B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "B[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
