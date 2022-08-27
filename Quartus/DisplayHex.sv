@@ -1,3 +1,4 @@
+//bit más significativo va en A
 module DisplayHex (input A, B, C, D, output [6:0] display);
 	assign display[0] = ~A&~B&~C&D | ~A&B&~C&~D | A&~B&C&D | A&B&~C&D ; 
 	assign display[1] = B&C&~D | A&C&D | A&B&~D | ~A&B&~C&D;

@@ -1,10 +1,2 @@
-Quartus/db
-Quartus/incremental_db
-Quartus/output_files
-*.qpf
-*.qsf
-*.qxw
-*.qxw.bak
-*.qxw.bak
-*.sv.bak
-*.qsw
+Quartus/*
+!Quartus/*.sv

@@ -4,139 +4,79 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "SSum[0]",
+					"name" : "outDisplay1[0]",
 					"strict" : false
 				},
 				{
-					"name" : "SSum[1]",
+					"name" : "outDisplay1[1]",
 					"strict" : false
 				},
 				{
-					"name" : "SSum[2]",
+					"name" : "outDisplay1[2]",
 					"strict" : false
 				},
 				{
-					"name" : "SSum[3]",
+					"name" : "outDisplay1[3]",
 					"strict" : false
 				},
 				{
-					"name" : "SRest[0]",
+					"name" : "outDisplay1[4]",
 					"strict" : false
 				},
 				{
-					"name" : "SRest[1]",
+					"name" : "outDisplay1[5]",
 					"strict" : false
 				},
 				{
-					"name" : "SRest[2]",
+					"name" : "outDisplay1[6]",
 					"strict" : false
 				},
 				{
-					"name" : "SRest[3]",
+					"name" : "seleccion[2]",
 					"strict" : false
 				},
 				{
-					"name" : "SMod[0]",
+					"name" : "b[0]",
 					"strict" : false
 				},
 				{
-					"name" : "SMod[1]",
+					"name" : "b[1]",
 					"strict" : false
 				},
 				{
-					"name" : "SMod[2]",
+					"name" : "b[2]",
 					"strict" : false
 				},
 				{
-					"name" : "SMod[3]",
+					"name" : "b[3]",
 					"strict" : false
 				},
 				{
-					"name" : "SMult[0]",
+					"name" : "a[0]",
 					"strict" : false
 				},
 				{
-					"name" : "SMult[1]",
+					"name" : "a[1]",
 					"strict" : false
 				},
 				{
-					"name" : "SMult[2]",
+					"name" : "a[2]",
 					"strict" : false
 				},
 				{
-					"name" : "SMult[3]",
+					"name" : "a[3]",
 					"strict" : false
 				},
 				{
-					"name" : "SDiv[0]",
+					"name" : "seleccion[1]",
 					"strict" : false
 				},
 				{
-					"name" : "SDiv[1]",
+					"name" : "seleccion[0]",
 					"strict" : false
 				},
 				{
-					"name" : "SDiv[2]",
-					"strict" : false
-				},
-				{
-					"name" : "SDiv[3]",
-					"strict" : false
-				},
-				{
-					"name" : "SAnd[0]",
-					"strict" : false
-				},
-				{
-					"name" : "SOr[0]",
-					"strict" : false
-				},
-				{
-					"name" : "SXor[0]",
-					"strict" : false
-				},
-				{
-					"name" : "SXor[1]",
-					"strict" : false
-				},
-				{
-					"name" : "SXor[2]",
-					"strict" : false
-				},
-				{
-					"name" : "SXor[3]",
-					"strict" : false
-				},
-				{
-					"name" : "A[0]",
-					"strict" : false
-				},
-				{
-					"name" : "A[1]",
-					"strict" : false
-				},
-				{
-					"name" : "B[3]",
-					"strict" : false
-				},
-				{
-					"name" : "B[2]",
-					"strict" : false
-				},
-				{
-					"name" : "A[2]",
-					"strict" : false
-				},
-				{
-					"name" : "A[3]",
-					"strict" : false
-				},
-				{
-					"name" : "B[1]",
-					"strict" : false
-				},
-				{
-					"name" : "B[0]",
+					"name" : "seleccion[3]",
 					"strict" : false
 				}
 			]

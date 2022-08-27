@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ALU
-Fri Aug 26 17:04:03 2022
+Sat Aug 27 08:37:28 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -15,20 +15,23 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis DSP Block Usage Summary
   9. General Register Statistics
- 10. Parameter Settings for User Entity Instance: Top-level Entity: |ALU
- 11. Parameter Settings for User Entity Instance: Suma:sumador
- 12. Parameter Settings for User Entity Instance: Resta:restador
- 13. Parameter Settings for User Entity Instance: Modulo:modulador
- 14. Parameter Settings for User Entity Instance: Multiplicacion:multiplicador
- 15. Parameter Settings for User Entity Instance: Division:divisor
- 16. Parameter Settings for User Entity Instance: AndN:ander
- 17. Parameter Settings for User Entity Instance: OrN:orer
- 18. Parameter Settings for User Entity Instance: XorN:xorer
- 19. Parameter Settings for Inferred Entity Instance: Modulo:modulador|lpm_divide:Mod0
- 20. Parameter Settings for Inferred Entity Instance: Division:divisor|lpm_divide:Div0
- 21. Post-Synthesis Netlist Statistics for Top Partition
- 22. Elapsed Time Per Partition
- 23. Analysis & Synthesis Messages
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |Calcu
+ 12. Parameter Settings for User Entity Instance: ALU:alu1
+ 13. Parameter Settings for User Entity Instance: ALU:alu1|Suma:sumador
+ 14. Parameter Settings for User Entity Instance: ALU:alu1|Resta:restador
+ 15. Parameter Settings for User Entity Instance: ALU:alu1|Modulo:modulador
+ 16. Parameter Settings for User Entity Instance: ALU:alu1|Multiplicacion:multiplicador
+ 17. Parameter Settings for User Entity Instance: ALU:alu1|Division:divisor
+ 18. Parameter Settings for User Entity Instance: ALU:alu1|AndN:ander
+ 19. Parameter Settings for User Entity Instance: ALU:alu1|OrN:orer
+ 20. Parameter Settings for User Entity Instance: ALU:alu1|XorN:xorer
+ 21. Parameter Settings for User Entity Instance: Mux:mux1
+ 22. Parameter Settings for Inferred Entity Instance: ALU:alu1|Modulo:modulador|lpm_divide:Mod0
+ 23. Parameter Settings for Inferred Entity Instance: ALU:alu1|Division:divisor|lpm_divide:Div0
+ 24. Post-Synthesis Netlist Statistics for Top Partition
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
 
 
 
@@ -55,14 +58,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Aug 26 17:04:03 2022       ;
+; Analysis & Synthesis Status     ; Successful - Sat Aug 27 08:37:28 2022       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; ALU                                         ;
-; Top-level Entity Name           ; ALU                                         ;
+; Top-level Entity Name           ; Calcu                                       ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 48                                          ;
+; Total pins                      ; 23                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 1                                           ;
@@ -81,7 +84,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; ALU                ; ALU                ;
+; Top-level entity name                                                           ; Calcu              ; ALU                ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -192,6 +195,9 @@ https://fpgasoftware.intel.com/eula.
 ; OrN.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/OrN.sv                     ;         ;
 ; XorN.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/XorN.sv                    ;         ;
 ; ALU.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv                     ;         ;
+; Calcu.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv                   ;         ;
+; DisplayHex.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/DisplayHex.sv              ;         ;
+; Mux.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Mux.sv                     ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf                            ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc                           ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc                       ;         ;
@@ -208,51 +214,52 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+------------+
 ; Resource                                    ; Usage      ;
 +---------------------------------------------+------------+
-; Estimate of Logic utilization (ALMs needed) ; 32         ;
+; Estimate of Logic utilization (ALMs needed) ; 47         ;
 ;                                             ;            ;
-; Combinational ALUT usage for logic          ; 63         ;
-;     -- 7 input functions                    ; 0          ;
-;     -- 6 input functions                    ; 1          ;
-;     -- 5 input functions                    ; 11         ;
-;     -- 4 input functions                    ; 9          ;
-;     -- <=3 input functions                  ; 42         ;
+; Combinational ALUT usage for logic          ; 81         ;
+;     -- 7 input functions                    ; 3          ;
+;     -- 6 input functions                    ; 9          ;
+;     -- 5 input functions                    ; 12         ;
+;     -- 4 input functions                    ; 21         ;
+;     -- <=3 input functions                  ; 36         ;
 ;                                             ;            ;
 ; Dedicated logic registers                   ; 0          ;
 ;                                             ;            ;
-; I/O pins                                    ; 48         ;
+; I/O pins                                    ; 23         ;
 ;                                             ;            ;
 ; Total DSP Blocks                            ; 1          ;
 ;                                             ;            ;
-; Maximum fan-out node                        ; B[3]~input ;
-; Maximum fan-out                             ; 18         ;
-; Total fan-out                               ; 277        ;
-; Average fan-out                             ; 1.73       ;
+; Maximum fan-out node                        ; b[3]~input ;
+; Maximum fan-out                             ; 24         ;
+; Total fan-out                               ; 346        ;
+; Average fan-out                             ; 2.70       ;
 +---------------------------------------------+------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                             ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                   ; Entity Name         ; Library Name ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |ALU                                      ; 63 (0)              ; 0 (0)                     ; 0                 ; 1          ; 48   ; 0            ; |ALU                                                                                                                  ; ALU                 ; work         ;
-;    |AndN:ander|                           ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|AndN:ander                                                                                                       ; AndN                ; work         ;
-;    |Division:divisor|                     ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Division:divisor                                                                                                 ; Division            ; work         ;
-;       |lpm_divide:Div0|                   ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Division:divisor|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_1am:auto_generated|  ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Division:divisor|lpm_divide:Div0|lpm_divide_1am:auto_generated                                                   ; lpm_divide_1am      ; work         ;
-;             |sign_div_unsign_7kh:divider| ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Division:divisor|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh ; work         ;
-;                |alt_u_div_kse:divider|    ; 22 (22)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Division:divisor|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse       ; work         ;
-;    |Modulo:modulador|                     ; 26 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Modulo:modulador                                                                                                 ; Modulo              ; work         ;
-;       |lpm_divide:Mod0|                   ; 26 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Modulo:modulador|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_42m:auto_generated|  ; 26 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Modulo:modulador|lpm_divide:Mod0|lpm_divide_42m:auto_generated                                                   ; lpm_divide_42m      ; work         ;
-;             |sign_div_unsign_7kh:divider| ; 26 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Modulo:modulador|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh ; work         ;
-;                |alt_u_div_kse:divider|    ; 26 (26)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Modulo:modulador|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse       ; work         ;
-;    |Multiplicacion:multiplicador|         ; 0 (0)               ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |ALU|Multiplicacion:multiplicador                                                                                     ; Multiplicacion      ; work         ;
-;    |OrN:orer|                             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|OrN:orer                                                                                                         ; OrN                 ; work         ;
-;    |Resta:restador|                       ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Resta:restador                                                                                                   ; Resta               ; work         ;
-;    |Suma:sumador|                         ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Suma:sumador                                                                                                     ; Suma                ; work         ;
-;    |XorN:xorer|                           ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|XorN:xorer                                                                                                       ; XorN                ; work         ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                           ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                              ; Entity Name         ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |Calcu                                       ; 81 (0)              ; 0 (0)                     ; 0                 ; 1          ; 23   ; 0            ; |Calcu                                                                                                                           ; Calcu               ; work         ;
+;    |ALU:alu1|                                ; 51 (0)              ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Calcu|ALU:alu1                                                                                                                  ; ALU                 ; work         ;
+;       |AndN:ander|                           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|AndN:ander                                                                                                       ; AndN                ; work         ;
+;       |Division:divisor|                     ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Division:divisor                                                                                                 ; Division            ; work         ;
+;          |lpm_divide:Div0|                   ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Division:divisor|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;             |lpm_divide_1am:auto_generated|  ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Division:divisor|lpm_divide:Div0|lpm_divide_1am:auto_generated                                                   ; lpm_divide_1am      ; work         ;
+;                |sign_div_unsign_7kh:divider| ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Division:divisor|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh ; work         ;
+;                   |alt_u_div_kse:divider|    ; 22 (22)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Division:divisor|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse       ; work         ;
+;       |Modulo:modulador|                     ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Modulo:modulador                                                                                                 ; Modulo              ; work         ;
+;          |lpm_divide:Mod0|                   ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Modulo:modulador|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;             |lpm_divide_42m:auto_generated|  ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Modulo:modulador|lpm_divide:Mod0|lpm_divide_42m:auto_generated                                                   ; lpm_divide_42m      ; work         ;
+;                |sign_div_unsign_7kh:divider| ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Modulo:modulador|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh ; work         ;
+;                   |alt_u_div_kse:divider|    ; 22 (22)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Modulo:modulador|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse       ; work         ;
+;       |Multiplicacion:multiplicador|         ; 0 (0)               ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Calcu|ALU:alu1|Multiplicacion:multiplicador                                                                                     ; Multiplicacion      ; work         ;
+;       |OrN:orer|                             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|OrN:orer                                                                                                         ; OrN                 ; work         ;
+;       |Resta:restador|                       ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Resta:restador                                                                                                   ; Resta               ; work         ;
+;    |DisplayHex:display1|                     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|DisplayHex:display1                                                                                                       ; DisplayHex          ; work         ;
+;    |Mux:mux1|                                ; 23 (23)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|Mux:mux1                                                                                                                  ; Mux                 ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -283,78 +290,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |ALU ;
-+----------------+-------+--------------------------------------------+
-; Parameter Name ; Value ; Type                                       ;
-+----------------+-------+--------------------------------------------+
-; N              ; 4     ; Signed Integer                             ;
-+----------------+-------+--------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 16:1               ; 3 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; No         ; |Calcu|Mux:mux1|Mux2       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
-+-----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Suma:sumador ;
-+----------------+-------+----------------------------------+
-; Parameter Name ; Value ; Type                             ;
-+----------------+-------+----------------------------------+
-; N              ; 4     ; Signed Integer                   ;
-+----------------+-------+----------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Resta:restador ;
-+----------------+-------+------------------------------------+
-; Parameter Name ; Value ; Type                               ;
-+----------------+-------+------------------------------------+
-; N              ; 4     ; Signed Integer                     ;
-+----------------+-------+------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Modulo:modulador ;
-+----------------+-------+--------------------------------------+
-; Parameter Name ; Value ; Type                                 ;
-+----------------+-------+--------------------------------------+
-; N              ; 4     ; Signed Integer                       ;
-+----------------+-------+--------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Multiplicacion:multiplicador ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; N              ; 4     ; Signed Integer                                   ;
-+----------------+-------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Division:divisor ;
-+----------------+-------+--------------------------------------+
-; Parameter Name ; Value ; Type                                 ;
-+----------------+-------+--------------------------------------+
-; N              ; 4     ; Signed Integer                       ;
-+----------------+-------+--------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------+
-; Parameter Settings for User Entity Instance: AndN:ander ;
-+----------------+-------+--------------------------------+
-; Parameter Name ; Value ; Type                           ;
-+----------------+-------+--------------------------------+
-; N              ; 4     ; Signed Integer                 ;
-+----------------+-------+--------------------------------+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |Calcu ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; N              ; 4     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------------------------------+
-; Parameter Settings for User Entity Instance: OrN:orer ;
+; Parameter Settings for User Entity Instance: ALU:alu1 ;
 +----------------+-------+------------------------------+
 ; Parameter Name ; Value ; Type                         ;
 +----------------+-------+------------------------------+
@@ -363,59 +319,139 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------+
-; Parameter Settings for User Entity Instance: XorN:xorer ;
-+----------------+-------+--------------------------------+
-; Parameter Name ; Value ; Type                           ;
-+----------------+-------+--------------------------------+
-; N              ; 4     ; Signed Integer                 ;
-+----------------+-------+--------------------------------+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:alu1|Suma:sumador ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; N              ; 4     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: Modulo:modulador|lpm_divide:Mod0 ;
-+------------------------+----------------+-----------------------------------------+
-; Parameter Name         ; Value          ; Type                                    ;
-+------------------------+----------------+-----------------------------------------+
-; LPM_WIDTHN             ; 4              ; Untyped                                 ;
-; LPM_WIDTHD             ; 4              ; Untyped                                 ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                 ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                 ;
-; LPM_PIPELINE           ; 0              ; Untyped                                 ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                 ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                 ;
-; CBXI_PARAMETER         ; lpm_divide_42m ; Untyped                                 ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                 ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                 ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                              ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                            ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                            ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                          ;
-+------------------------+----------------+-----------------------------------------+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:alu1|Resta:restador ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; N              ; 4     ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: Division:divisor|lpm_divide:Div0 ;
-+------------------------+----------------+-----------------------------------------+
-; Parameter Name         ; Value          ; Type                                    ;
-+------------------------+----------------+-----------------------------------------+
-; LPM_WIDTHN             ; 4              ; Untyped                                 ;
-; LPM_WIDTHD             ; 4              ; Untyped                                 ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                 ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                 ;
-; LPM_PIPELINE           ; 0              ; Untyped                                 ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                 ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                 ;
-; CBXI_PARAMETER         ; lpm_divide_1am ; Untyped                                 ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                 ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                 ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                              ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                            ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                            ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                          ;
-+------------------------+----------------+-----------------------------------------+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:alu1|Modulo:modulador ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; N              ; 4     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:alu1|Multiplicacion:multiplicador ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; N              ; 4     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:alu1|Division:divisor ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; N              ; 4     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:alu1|AndN:ander ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; N              ; 4     ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:alu1|OrN:orer ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; N              ; 4     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:alu1|XorN:xorer ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; N              ; 4     ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mux:mux1 ;
++----------------+-------+------------------------------+
+; Parameter Name ; Value ; Type                         ;
++----------------+-------+------------------------------+
+; N              ; 4     ; Signed Integer               ;
++----------------+-------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ALU:alu1|Modulo:modulador|lpm_divide:Mod0 ;
++------------------------+----------------+--------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                             ;
++------------------------+----------------+--------------------------------------------------+
+; LPM_WIDTHN             ; 4              ; Untyped                                          ;
+; LPM_WIDTHD             ; 4              ; Untyped                                          ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                          ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                          ;
+; LPM_PIPELINE           ; 0              ; Untyped                                          ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                          ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                          ;
+; CBXI_PARAMETER         ; lpm_divide_42m ; Untyped                                          ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                          ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                          ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                     ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                   ;
++------------------------+----------------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ALU:alu1|Division:divisor|lpm_divide:Div0 ;
++------------------------+----------------+--------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                             ;
++------------------------+----------------+--------------------------------------------------+
+; LPM_WIDTHN             ; 4              ; Untyped                                          ;
+; LPM_WIDTHD             ; 4              ; Untyped                                          ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                          ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                          ;
+; LPM_PIPELINE           ; 0              ; Untyped                                          ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                          ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                          ;
+; CBXI_PARAMETER         ; lpm_divide_1am ; Untyped                                          ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                          ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                          ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                     ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                   ;
++------------------------+----------------+--------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -424,28 +460,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 68                          ;
-;     arith             ; 16                          ;
+; arriav_lcell_comb     ; 82                          ;
+;     arith             ; 17                          ;
 ;         0 data inputs ; 4                           ;
-;         2 data inputs ; 6                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 4                           ;
 ;         5 data inputs ; 6                           ;
-;     normal            ; 30                          ;
+;     extend            ; 3                           ;
+;         7 data inputs ; 3                           ;
+;     normal            ; 44                          ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 4                           ;
-;         2 data inputs ; 10                          ;
-;         3 data inputs ; 6                           ;
-;         4 data inputs ; 3                           ;
-;         5 data inputs ; 5                           ;
-;         6 data inputs ; 1                           ;
-;     shared            ; 22                          ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 8                           ;
+;         4 data inputs ; 15                          ;
+;         5 data inputs ; 6                           ;
+;         6 data inputs ; 9                           ;
+;     shared            ; 18                          ;
 ;         0 data inputs ; 6                           ;
-;         2 data inputs ; 10                          ;
+;         2 data inputs ; 6                           ;
 ;         4 data inputs ; 6                           ;
 ; arriav_mac            ; 1                           ;
-; boundary_port         ; 48                          ;
+; boundary_port         ; 23                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 8.50                        ;
-; Average LUT depth     ; 5.68                        ;
+; Max LUT depth         ; 9.50                        ;
+; Average LUT depth     ; 7.21                        ;
 +-----------------------+-----------------------------+
 
 
@@ -454,7 +493,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -464,11 +503,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Aug 26 17:03:07 2022
+    Info: Processing started: Sat Aug 27 08:36:56 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Warning (12019): Can't analyze file -- file DispplayHex.sv is missing
 Info (12021): Found 1 design units, including 1 entities, in source file suma.sv
     Info (12023): Found entity 1: Suma File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Suma.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file resta.sv
@@ -487,22 +525,33 @@ Info (12021): Found 1 design units, including 1 entities, in source file xorn.sv
     Info (12023): Found entity 1: XorN File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/XorN.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
     Info (12023): Found entity 1: ALU File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 1
-Info (12127): Elaborating entity "ALU" for the top level hierarchy
-Warning (10034): Output port "SLShift" at ALU.sv(1) has no driver File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 1
-Warning (10034): Output port "SRShift" at ALU.sv(1) has no driver File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 1
-Info (12128): Elaborating entity "Suma" for hierarchy "Suma:sumador" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 5
-Info (12128): Elaborating entity "Resta" for hierarchy "Resta:restador" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 6
-Info (12128): Elaborating entity "Modulo" for hierarchy "Modulo:modulador" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 7
-Info (12128): Elaborating entity "Multiplicacion" for hierarchy "Multiplicacion:multiplicador" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 8
-Info (12128): Elaborating entity "Division" for hierarchy "Division:divisor" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 9
-Info (12128): Elaborating entity "AndN" for hierarchy "AndN:ander" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 11
-Info (12128): Elaborating entity "OrN" for hierarchy "OrN:orer" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 12
-Info (12128): Elaborating entity "XorN" for hierarchy "XorN:xorer" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 13
+Info (12021): Found 1 design units, including 1 entities, in source file calcu.sv
+    Info (12023): Found entity 1: Calcu File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file displayhex.sv
+    Info (12023): Found entity 1: DisplayHex File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/DisplayHex.sv Line: 2
+Warning (12090): Entity "Mux" obtained from "Mux.sv" instead of from Quartus Prime megafunction library File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Mux.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file mux.sv
+    Info (12023): Found entity 1: Mux File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Mux.sv Line: 3
+Info (12127): Elaborating entity "Calcu" for the top level hierarchy
+Warning (10034): Output port "flags" at Calcu.sv(1) has no driver File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 1
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu1" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 6
+Warning (10034): Output port "rLShift" at ALU.sv(1) has no driver File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 1
+Warning (10034): Output port "rRShift" at ALU.sv(1) has no driver File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 1
+Info (12128): Elaborating entity "Suma" for hierarchy "ALU:alu1|Suma:sumador" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 5
+Info (12128): Elaborating entity "Resta" for hierarchy "ALU:alu1|Resta:restador" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 6
+Info (12128): Elaborating entity "Modulo" for hierarchy "ALU:alu1|Modulo:modulador" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 7
+Info (12128): Elaborating entity "Multiplicacion" for hierarchy "ALU:alu1|Multiplicacion:multiplicador" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 8
+Info (12128): Elaborating entity "Division" for hierarchy "ALU:alu1|Division:divisor" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 9
+Info (12128): Elaborating entity "AndN" for hierarchy "ALU:alu1|AndN:ander" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 11
+Info (12128): Elaborating entity "OrN" for hierarchy "ALU:alu1|OrN:orer" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 12
+Info (12128): Elaborating entity "XorN" for hierarchy "ALU:alu1|XorN:xorer" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 13
+Info (12128): Elaborating entity "Mux" for hierarchy "Mux:mux1" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 7
+Info (12128): Elaborating entity "DisplayHex" for hierarchy "DisplayHex:display1" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 8
 Info (278001): Inferred 2 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Modulo:modulador|Mod0" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Modulo.sv Line: 2
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Division:divisor|Div0" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Division.sv Line: 2
-Info (12130): Elaborated megafunction instantiation "Modulo:modulador|lpm_divide:Mod0" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Modulo.sv Line: 2
-Info (12133): Instantiated megafunction "Modulo:modulador|lpm_divide:Mod0" with the following parameter: File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Modulo.sv Line: 2
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ALU:alu1|Modulo:modulador|Mod0" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Modulo.sv Line: 2
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ALU:alu1|Division:divisor|Div0" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Division.sv Line: 2
+Info (12130): Elaborated megafunction instantiation "ALU:alu1|Modulo:modulador|lpm_divide:Mod0" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Modulo.sv Line: 2
+Info (12133): Instantiated megafunction "ALU:alu1|Modulo:modulador|lpm_divide:Mod0" with the following parameter: File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Modulo.sv Line: 2
     Info (12134): Parameter "LPM_WIDTHN" = "4"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -513,8 +562,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_7kh File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/db/sign_div_unsign_7kh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kse.tdf
     Info (12023): Found entity 1: alt_u_div_kse File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/db/alt_u_div_kse.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "Division:divisor|lpm_divide:Div0" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Division.sv Line: 2
-Info (12133): Instantiated megafunction "Division:divisor|lpm_divide:Div0" with the following parameter: File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Division.sv Line: 2
+Info (12130): Elaborated megafunction instantiation "ALU:alu1|Division:divisor|lpm_divide:Div0" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Division.sv Line: 2
+Info (12133): Instantiated megafunction "ALU:alu1|Division:divisor|lpm_divide:Div0" with the following parameter: File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Division.sv Line: 2
     Info (12134): Parameter "LPM_WIDTHN" = "4"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -522,32 +571,22 @@ Info (12133): Instantiated megafunction "Division:divisor|lpm_divide:Div0" with 
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_1am.tdf
     Info (12023): Found entity 1: lpm_divide_1am File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/db/lpm_divide_1am.tdf Line: 25
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "SAnd[1]" is stuck at GND File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 1
-    Warning (13410): Pin "SAnd[2]" is stuck at GND File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 1
-    Warning (13410): Pin "SAnd[3]" is stuck at GND File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 1
-    Warning (13410): Pin "SOr[1]" is stuck at GND File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 1
-    Warning (13410): Pin "SOr[2]" is stuck at GND File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 1
-    Warning (13410): Pin "SOr[3]" is stuck at GND File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 1
-    Warning (13410): Pin "SLShift[0]" is stuck at GND File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 1
-    Warning (13410): Pin "SLShift[1]" is stuck at GND File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 1
-    Warning (13410): Pin "SLShift[2]" is stuck at GND File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 1
-    Warning (13410): Pin "SLShift[3]" is stuck at GND File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 1
-    Warning (13410): Pin "SRShift[0]" is stuck at GND File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 1
-    Warning (13410): Pin "SRShift[1]" is stuck at GND File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 1
-    Warning (13410): Pin "SRShift[2]" is stuck at GND File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 1
-    Warning (13410): Pin "SRShift[3]" is stuck at GND File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 1
+    Warning (13410): Pin "flags[0]" is stuck at GND File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 1
+    Warning (13410): Pin "flags[1]" is stuck at GND File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 1
+    Warning (13410): Pin "flags[2]" is stuck at GND File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 1
+    Warning (13410): Pin "flags[3]" is stuck at GND File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 1
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 112 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 8 input pins
-    Info (21059): Implemented 40 output pins
-    Info (21061): Implemented 63 logic cells
+Info (21057): Implemented 105 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 11 output pins
+    Info (21061): Implemented 81 logic cells
     Info (21062): Implemented 1 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 4814 megabytes
-    Info: Processing ended: Fri Aug 26 17:04:03 2022
-    Info: Elapsed time: 00:00:56
-    Info: Total CPU time (on all processors): 00:01:24
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 4811 megabytes
+    Info: Processing ended: Sat Aug 27 08:37:28 2022
+    Info: Elapsed time: 00:00:32
+    Info: Total CPU time (on all processors): 00:01:04
 
 

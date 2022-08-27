@@ -1,4 +1,4 @@
-module ALU #(parameter N=4)(input [N-1:0] A, input [N-1:0] B, output [N-1:0] SSum, SRest, SMod, SMult, SDiv, SAnd, SOr, SXor, SLShift, SRShift);
+module ALU #(parameter N=4)(input [N-1:0] A, input [N-1:0] B, output [N-1:0] rSum, rRest, rMod, rMult, rDiv, rAnd, rOr, rXor, rLShift, rRShift);
 //	logic [N:0] sumAux,restAux,modAux, multAux, divAux, andAux, orAux, xorAux, lShifAux, rShiftAux;
 	logic [N-1:0] sumAux,restAux,modAux, multAux, divAux, andAux, orAux, xorAux, lShifAux, rShiftAux;
 	
@@ -14,15 +14,15 @@ module ALU #(parameter N=4)(input [N-1:0] A, input [N-1:0] B, output [N-1:0] SSu
 //	LShift lShifter(A,B,Ssum);
 //	RShift rShifter sumador(A,B,Ssum); 
 
-	assign SSum = sumAux;
-	assign SRest = restAux;
-	assign SMod = modAux;
-	assign SMult = multAux;
-	assign SDiv = divAux;
-	assign SAnd = andAux;
-	assign SOr = orAux;
-	assign SXor = xorAux;
-//	assign SLShift = lShiftAux;
-//	assign SRShift = rShiftAux;
+	assign rSum = sumAux;
+	assign rRest = restAux;
+	assign rMod = modAux;
+	assign rMult = multAux;
+	assign rDiv = divAux;
+	assign rAnd = andAux;
+	assign rOr = orAux;
+	assign rXor = xorAux;
+//	assign rLShift = lShiftAux;
+//	assign rRShift = rShiftAux;
 
 endmodule 
