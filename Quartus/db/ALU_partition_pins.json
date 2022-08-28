@@ -4,31 +4,19 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "outDisplay1[0]",
+					"name" : "salida[0]",
 					"strict" : false
 				},
 				{
-					"name" : "outDisplay1[1]",
+					"name" : "salida[1]",
 					"strict" : false
 				},
 				{
-					"name" : "outDisplay1[2]",
+					"name" : "salida[2]",
 					"strict" : false
 				},
 				{
-					"name" : "outDisplay1[3]",
-					"strict" : false
-				},
-				{
-					"name" : "outDisplay1[4]",
-					"strict" : false
-				},
-				{
-					"name" : "outDisplay1[5]",
-					"strict" : false
-				},
-				{
-					"name" : "outDisplay1[6]",
+					"name" : "salida[3]",
 					"strict" : false
 				},
 				{
@@ -36,7 +24,31 @@
 					"strict" : false
 				},
 				{
+					"name" : "seleccion[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seleccion[1]",
+					"strict" : false
+				},
+				{
+					"name" : "a[0]",
+					"strict" : false
+				},
+				{
 					"name" : "b[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seleccion[3]",
+					"strict" : false
+				},
+				{
+					"name" : "b[3]",
+					"strict" : false
+				},
+				{
+					"name" : "a[1]",
 					"strict" : false
 				},
 				{
@@ -48,35 +60,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "b[3]",
-					"strict" : false
-				},
-				{
-					"name" : "a[0]",
-					"strict" : false
-				},
-				{
-					"name" : "a[1]",
-					"strict" : false
-				},
-				{
 					"name" : "a[2]",
 					"strict" : false
 				},
 				{
 					"name" : "a[3]",
-					"strict" : false
-				},
-				{
-					"name" : "seleccion[1]",
-					"strict" : false
-				},
-				{
-					"name" : "seleccion[0]",
-					"strict" : false
-				},
-				{
-					"name" : "seleccion[3]",
 					"strict" : false
 				}
 			]
