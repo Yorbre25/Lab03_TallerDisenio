@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ALU
-Sun Aug 28 10:23:03 2022
+Thu Sep 01 10:27:39 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -29,13 +29,11 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  21. Parameter Settings for User Entity Instance: ALU:alu1|LeftShift:lShifter
  22. Parameter Settings for User Entity Instance: ALU:alu1|RightShift:rShifter
  23. Parameter Settings for User Entity Instance: Mux:mux1
- 24. Parameter Settings for Inferred Entity Instance: ALU:alu1|Division:divisor|lpm_divide:Div0
- 25. Parameter Settings for Inferred Entity Instance: ALU:alu1|Modulo:modulador|lpm_divide:Mod0
- 26. Port Connectivity Checks: "ALU:alu1|RightShift:rShifter"
- 27. Port Connectivity Checks: "ALU:alu1|LeftShift:lShifter"
- 28. Post-Synthesis Netlist Statistics for Top Partition
- 29. Elapsed Time Per Partition
- 30. Analysis & Synthesis Messages
+ 24. Parameter Settings for Inferred Entity Instance: ALU:alu1|Modulo:modulador|lpm_divide:Mod0
+ 25. Parameter Settings for Inferred Entity Instance: ALU:alu1|Division:divisor|lpm_divide:Div0
+ 26. Post-Synthesis Netlist Statistics for Top Partition
+ 27. Elapsed Time Per Partition
+ 28. Analysis & Synthesis Messages
 
 
 
@@ -62,7 +60,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Aug 28 10:23:03 2022       ;
+; Analysis & Synthesis Status     ; Successful - Thu Sep 01 10:27:39 2022       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; ALU                                         ;
 ; Top-level Entity Name           ; Calcu                                       ;
@@ -174,8 +172,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -185,33 +183,33 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                         ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                     ; Library ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------+---------+
-; Suma.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Suma.sv                    ;         ;
-; Resta.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Resta.sv                   ;         ;
-; Modulo.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Modulo.sv                  ;         ;
-; Multiplicacion.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Multiplicacion.sv          ;         ;
-; Division.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Division.sv                ;         ;
-; AndN.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/AndN.sv                    ;         ;
-; OrN.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/OrN.sv                     ;         ;
-; XorN.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/XorN.sv                    ;         ;
-; ALU.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv                     ;         ;
-; Calcu.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv                   ;         ;
-; Mux.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Mux.sv                     ;         ;
-; LeftShift.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/LeftShift.sv               ;         ;
-; RightShift.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/RightShift.sv              ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf                            ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc                           ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc                       ;         ;
-; aglobal201.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                            ;         ;
-; db/lpm_divide_1am.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/db/lpm_divide_1am.tdf      ;         ;
-; db/sign_div_unsign_7kh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/db/sign_div_unsign_7kh.tdf ;         ;
-; db/alt_u_div_kse.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/db/alt_u_div_kse.tdf       ;         ;
-; db/lpm_divide_42m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/db/lpm_divide_42m.tdf      ;         ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                 ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                             ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------+---------+
+; Suma.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Suma.sv                    ;         ;
+; Resta.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Resta.sv                   ;         ;
+; Modulo.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Modulo.sv                  ;         ;
+; Multiplicacion.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Multiplicacion.sv          ;         ;
+; Division.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Division.sv                ;         ;
+; AndN.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/AndN.sv                    ;         ;
+; OrN.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/OrN.sv                     ;         ;
+; XorN.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/XorN.sv                    ;         ;
+; ALU.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv                     ;         ;
+; Calcu.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv                   ;         ;
+; Mux.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Mux.sv                     ;         ;
+; LeftShift.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/LeftShift.sv               ;         ;
+; RightShift.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/RightShift.sv              ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf                    ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc                   ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc               ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                    ;         ;
+; db/lpm_divide_42m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/db/lpm_divide_42m.tdf      ;         ;
+; db/sign_div_unsign_7kh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/db/sign_div_unsign_7kh.tdf ;         ;
+; db/alt_u_div_kse.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/db/alt_u_div_kse.tdf       ;         ;
+; db/lpm_divide_1am.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/db/lpm_divide_1am.tdf      ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------+---------+
 
 
 +----------------------------------------------------------+
@@ -219,14 +217,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+------------+
 ; Resource                                    ; Usage      ;
 +---------------------------------------------+------------+
-; Estimate of Logic utilization (ALMs needed) ; 37         ;
+; Estimate of Logic utilization (ALMs needed) ; 42         ;
 ;                                             ;            ;
-; Combinational ALUT usage for logic          ; 68         ;
+; Combinational ALUT usage for logic          ; 73         ;
 ;     -- 7 input functions                    ; 1          ;
-;     -- 6 input functions                    ; 4          ;
-;     -- 5 input functions                    ; 15         ;
-;     -- 4 input functions                    ; 16         ;
-;     -- <=3 input functions                  ; 32         ;
+;     -- 6 input functions                    ; 9          ;
+;     -- 5 input functions                    ; 12         ;
+;     -- 4 input functions                    ; 15         ;
+;     -- <=3 input functions                  ; 36         ;
 ;                                             ;            ;
 ; Dedicated logic registers                   ; 0          ;
 ;                                             ;            ;
@@ -235,9 +233,9 @@ https://fpgasoftware.intel.com/eula.
 ; Total DSP Blocks                            ; 1          ;
 ;                                             ;            ;
 ; Maximum fan-out node                        ; b[3]~input ;
-; Maximum fan-out                             ; 23         ;
-; Total fan-out                               ; 280        ;
-; Average fan-out                             ; 2.57       ;
+; Maximum fan-out                             ; 22         ;
+; Total fan-out                               ; 301        ;
+; Average fan-out                             ; 2.64       ;
 +---------------------------------------------+------------+
 
 
@@ -246,21 +244,22 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                              ; Entity Name         ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |Calcu                                       ; 68 (0)              ; 0 (0)                     ; 0                 ; 1          ; 20   ; 0            ; |Calcu                                                                                                                           ; Calcu               ; work         ;
-;    |ALU:alu1|                                ; 50 (0)              ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Calcu|ALU:alu1                                                                                                                  ; ALU                 ; work         ;
+; |Calcu                                       ; 73 (0)              ; 0 (0)                     ; 0                 ; 1          ; 20   ; 0            ; |Calcu                                                                                                                           ; Calcu               ; work         ;
+;    |ALU:alu1|                                ; 61 (0)              ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Calcu|ALU:alu1                                                                                                                  ; ALU                 ; work         ;
 ;       |Division:divisor|                     ; 23 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Division:divisor                                                                                                 ; Division            ; work         ;
 ;          |lpm_divide:Div0|                   ; 23 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Division:divisor|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
 ;             |lpm_divide_1am:auto_generated|  ; 23 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Division:divisor|lpm_divide:Div0|lpm_divide_1am:auto_generated                                                   ; lpm_divide_1am      ; work         ;
 ;                |sign_div_unsign_7kh:divider| ; 23 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Division:divisor|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh ; work         ;
 ;                   |alt_u_div_kse:divider|    ; 23 (23)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Division:divisor|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse       ; work         ;
-;       |Modulo:modulador|                     ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Modulo:modulador                                                                                                 ; Modulo              ; work         ;
-;          |lpm_divide:Mod0|                   ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Modulo:modulador|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
-;             |lpm_divide_42m:auto_generated|  ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Modulo:modulador|lpm_divide:Mod0|lpm_divide_42m:auto_generated                                                   ; lpm_divide_42m      ; work         ;
-;                |sign_div_unsign_7kh:divider| ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Modulo:modulador|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh ; work         ;
-;                   |alt_u_div_kse:divider|    ; 22 (22)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Modulo:modulador|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse       ; work         ;
+;       |Modulo:modulador|                     ; 24 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Modulo:modulador                                                                                                 ; Modulo              ; work         ;
+;          |lpm_divide:Mod0|                   ; 24 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Modulo:modulador|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;             |lpm_divide_42m:auto_generated|  ; 24 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Modulo:modulador|lpm_divide:Mod0|lpm_divide_42m:auto_generated                                                   ; lpm_divide_42m      ; work         ;
+;                |sign_div_unsign_7kh:divider| ; 24 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Modulo:modulador|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh ; work         ;
+;                   |alt_u_div_kse:divider|    ; 24 (24)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Modulo:modulador|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse       ; work         ;
 ;       |Multiplicacion:multiplicador|         ; 0 (0)               ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Calcu|ALU:alu1|Multiplicacion:multiplicador                                                                                     ; Multiplicacion      ; work         ;
-;       |Resta:restador|                       ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Resta:restador                                                                                                   ; Resta               ; work         ;
-;    |Mux:mux1|                                ; 18 (18)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|Mux:mux1                                                                                                                  ; Mux                 ; work         ;
+;       |OrN:orer|                             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|OrN:orer                                                                                                         ; OrN                 ; work         ;
+;       |Resta:restador|                       ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Resta:restador                                                                                                   ; Resta               ; work         ;
+;    |Mux:mux1|                                ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|Mux:mux1                                                                                                                  ; Mux                 ; work         ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -292,13 +291,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 16:1               ; 4 bits    ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; No         ; |Calcu|Mux:mux1|Mux3       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; 1:1                ; 2 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |Calcu|ALU:alu1|Resta:restador|Add0 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
 
 
 +-----------------------------------------------------------------------+
@@ -432,29 +431,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: ALU:alu1|Division:divisor|lpm_divide:Div0 ;
-+------------------------+----------------+--------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                             ;
-+------------------------+----------------+--------------------------------------------------+
-; LPM_WIDTHN             ; 4              ; Untyped                                          ;
-; LPM_WIDTHD             ; 4              ; Untyped                                          ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                          ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                          ;
-; LPM_PIPELINE           ; 0              ; Untyped                                          ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                          ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                          ;
-; CBXI_PARAMETER         ; lpm_divide_1am ; Untyped                                          ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                          ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                          ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                       ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                     ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                     ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                   ;
-+------------------------+----------------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: ALU:alu1|Modulo:modulador|lpm_divide:Mod0 ;
 +------------------------+----------------+--------------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                             ;
@@ -477,22 +453,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:alu1|RightShift:rShifter"                                                                                                                                         ;
-+------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                                                               ;
-+------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; S    ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (4 bits) it drives.  The 3 most-significant bit(s) in the port expression will be connected to GND. ;
-+------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:alu1|LeftShift:lShifter"                                                                                                                                          ;
-+------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                                                               ;
-+------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; S    ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (4 bits) it drives.  The 3 most-significant bit(s) in the port expression will be connected to GND. ;
-+------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ALU:alu1|Division:divisor|lpm_divide:Div0 ;
++------------------------+----------------+--------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                             ;
++------------------------+----------------+--------------------------------------------------+
+; LPM_WIDTHN             ; 4              ; Untyped                                          ;
+; LPM_WIDTHD             ; 4              ; Untyped                                          ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                          ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                          ;
+; LPM_PIPELINE           ; 0              ; Untyped                                          ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                          ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                          ;
+; CBXI_PARAMETER         ; lpm_divide_1am ; Untyped                                          ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                          ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                          ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                     ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                   ;
++------------------------+----------------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------+
@@ -500,7 +481,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 69                          ;
+; arriav_lcell_comb     ; 74                          ;
 ;     arith             ; 17                          ;
 ;         0 data inputs ; 4                           ;
 ;         1 data inputs ; 1                           ;
@@ -509,13 +490,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         5 data inputs ; 6                           ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 33                          ;
+;     normal            ; 38                          ;
 ;         0 data inputs ; 1                           ;
-;         2 data inputs ; 4                           ;
-;         3 data inputs ; 5                           ;
-;         4 data inputs ; 10                          ;
-;         5 data inputs ; 9                           ;
-;         6 data inputs ; 4                           ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 9                           ;
+;         5 data inputs ; 6                           ;
+;         6 data inputs ; 9                           ;
 ;     shared            ; 18                          ;
 ;         0 data inputs ; 6                           ;
 ;         2 data inputs ; 6                           ;
@@ -523,8 +504,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; arriav_mac            ; 1                           ;
 ; boundary_port         ; 20                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 9.50                        ;
-; Average LUT depth     ; 7.10                        ;
+; Max LUT depth         ; 10.50                       ;
+; Average LUT depth     ; 7.88                        ;
 +-----------------------+-----------------------------+
 
 
@@ -533,7 +514,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -543,100 +524,97 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Aug 28 10:22:14 2022
+    Info: Processing started: Thu Sep 01 10:27:26 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file suma.sv
-    Info (12023): Found entity 1: Suma File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Suma.sv Line: 1
+    Info (12023): Found entity 1: Suma File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Suma.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file resta.sv
-    Info (12023): Found entity 1: Resta File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Resta.sv Line: 1
+    Info (12023): Found entity 1: Resta File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Resta.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file modulo.sv
-    Info (12023): Found entity 1: Modulo File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Modulo.sv Line: 1
+    Info (12023): Found entity 1: Modulo File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Modulo.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file multiplicacion.sv
-    Info (12023): Found entity 1: Multiplicacion File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Multiplicacion.sv Line: 1
+    Info (12023): Found entity 1: Multiplicacion File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Multiplicacion.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file division.sv
-    Info (12023): Found entity 1: Division File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Division.sv Line: 1
+    Info (12023): Found entity 1: Division File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Division.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file andn.sv
-    Info (12023): Found entity 1: AndN File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/AndN.sv Line: 1
+    Info (12023): Found entity 1: AndN File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/AndN.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file orn.sv
-    Info (12023): Found entity 1: OrN File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/OrN.sv Line: 1
+    Info (12023): Found entity 1: OrN File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/OrN.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file xorn.sv
-    Info (12023): Found entity 1: XorN File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/XorN.sv Line: 1
+    Info (12023): Found entity 1: XorN File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/XorN.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
-    Info (12023): Found entity 1: ALU File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 1
+    Info (12023): Found entity 1: ALU File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file calcu.sv
-    Info (12023): Found entity 1: Calcu File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 2
+    Info (12023): Found entity 1: Calcu File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file displayhex.sv
-    Info (12023): Found entity 1: DisplayHex File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/DisplayHex.sv Line: 2
-Warning (12090): Entity "Mux" obtained from "Mux.sv" instead of from Quartus Prime megafunction library File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Mux.sv Line: 3
+    Info (12023): Found entity 1: DisplayHex File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/DisplayHex.sv Line: 2
+Warning (12090): Entity "Mux" obtained from "Mux.sv" instead of from Quartus Prime megafunction library File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Mux.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file mux.sv
-    Info (12023): Found entity 1: Mux File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Mux.sv Line: 3
+    Info (12023): Found entity 1: Mux File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Mux.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file testcalcu.sv
-    Info (12023): Found entity 1: testCalcu File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/testCalcu.sv Line: 1
+    Info (12023): Found entity 1: testCalcu File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/testCalcu.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file leftshift.sv
-    Info (12023): Found entity 1: LeftShift File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/LeftShift.sv Line: 1
+    Info (12023): Found entity 1: LeftShift File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/LeftShift.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rightshift.sv
-    Info (12023): Found entity 1: RightShift File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/RightShift.sv Line: 1
+    Info (12023): Found entity 1: RightShift File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/RightShift.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file comparador.sv
+    Info (12023): Found entity 1: Comparador File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Comparador.sv Line: 1
 Info (12127): Elaborating entity "Calcu" for the top level hierarchy
-Warning (10034): Output port "flags" at Calcu.sv(2) has no driver File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 2
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu1" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 7
-Info (12128): Elaborating entity "Suma" for hierarchy "ALU:alu1|Suma:sumador" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 4
-Info (12128): Elaborating entity "Resta" for hierarchy "ALU:alu1|Resta:restador" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 5
-Info (12128): Elaborating entity "Modulo" for hierarchy "ALU:alu1|Modulo:modulador" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 6
-Info (12128): Elaborating entity "Multiplicacion" for hierarchy "ALU:alu1|Multiplicacion:multiplicador" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 7
-Info (12128): Elaborating entity "Division" for hierarchy "ALU:alu1|Division:divisor" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 8
-Info (12128): Elaborating entity "AndN" for hierarchy "ALU:alu1|AndN:ander" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 10
-Info (12128): Elaborating entity "OrN" for hierarchy "ALU:alu1|OrN:orer" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 11
-Info (12128): Elaborating entity "XorN" for hierarchy "ALU:alu1|XorN:xorer" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 12
-Info (12128): Elaborating entity "LeftShift" for hierarchy "ALU:alu1|LeftShift:lShifter" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 13
-Warning (10230): Verilog HDL assignment warning at LeftShift.sv(2): truncated value with size 4 to match size of target (1) File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/LeftShift.sv Line: 2
-Info (12128): Elaborating entity "RightShift" for hierarchy "ALU:alu1|RightShift:rShifter" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 14
-Warning (10230): Verilog HDL assignment warning at RightShift.sv(2): truncated value with size 4 to match size of target (1) File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/RightShift.sv Line: 2
-Info (12128): Elaborating entity "Mux" for hierarchy "Mux:mux1" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 8
-Warning (10199): Verilog HDL Case Statement warning at Mux.sv(17): case item expression never matches the case expression File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Mux.sv Line: 17
-Warning (10199): Verilog HDL Case Statement warning at Mux.sv(18): case item expression never matches the case expression File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Mux.sv Line: 18
+Warning (10034): Output port "flags" at Calcu.sv(2) has no driver File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 2
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu1" File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 7
+Info (12128): Elaborating entity "Suma" for hierarchy "ALU:alu1|Suma:sumador" File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 4
+Info (12128): Elaborating entity "Resta" for hierarchy "ALU:alu1|Resta:restador" File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 5
+Info (12128): Elaborating entity "Modulo" for hierarchy "ALU:alu1|Modulo:modulador" File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 6
+Info (12128): Elaborating entity "Multiplicacion" for hierarchy "ALU:alu1|Multiplicacion:multiplicador" File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 7
+Info (12128): Elaborating entity "Division" for hierarchy "ALU:alu1|Division:divisor" File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 8
+Info (12128): Elaborating entity "AndN" for hierarchy "ALU:alu1|AndN:ander" File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 10
+Info (12128): Elaborating entity "OrN" for hierarchy "ALU:alu1|OrN:orer" File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 11
+Info (12128): Elaborating entity "XorN" for hierarchy "ALU:alu1|XorN:xorer" File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 12
+Info (12128): Elaborating entity "LeftShift" for hierarchy "ALU:alu1|LeftShift:lShifter" File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 13
+Info (12128): Elaborating entity "RightShift" for hierarchy "ALU:alu1|RightShift:rShifter" File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 14
+Info (12128): Elaborating entity "Mux" for hierarchy "Mux:mux1" File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 8
 Info (278001): Inferred 2 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ALU:alu1|Division:divisor|Div0" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Division.sv Line: 2
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ALU:alu1|Modulo:modulador|Mod0" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Modulo.sv Line: 2
-Info (12130): Elaborated megafunction instantiation "ALU:alu1|Division:divisor|lpm_divide:Div0" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Division.sv Line: 2
-Info (12133): Instantiated megafunction "ALU:alu1|Division:divisor|lpm_divide:Div0" with the following parameter: File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Division.sv Line: 2
-    Info (12134): Parameter "LPM_WIDTHN" = "4"
-    Info (12134): Parameter "LPM_WIDTHD" = "4"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_1am.tdf
-    Info (12023): Found entity 1: lpm_divide_1am File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/db/lpm_divide_1am.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_7kh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_7kh File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/db/sign_div_unsign_7kh.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kse.tdf
-    Info (12023): Found entity 1: alt_u_div_kse File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/db/alt_u_div_kse.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "ALU:alu1|Modulo:modulador|lpm_divide:Mod0" File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Modulo.sv Line: 2
-Info (12133): Instantiated megafunction "ALU:alu1|Modulo:modulador|lpm_divide:Mod0" with the following parameter: File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Modulo.sv Line: 2
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ALU:alu1|Modulo:modulador|Mod0" File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Modulo.sv Line: 2
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ALU:alu1|Division:divisor|Div0" File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Division.sv Line: 2
+Info (12130): Elaborated megafunction instantiation "ALU:alu1|Modulo:modulador|lpm_divide:Mod0" File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Modulo.sv Line: 2
+Info (12133): Instantiated megafunction "ALU:alu1|Modulo:modulador|lpm_divide:Mod0" with the following parameter: File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Modulo.sv Line: 2
     Info (12134): Parameter "LPM_WIDTHN" = "4"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_42m.tdf
-    Info (12023): Found entity 1: lpm_divide_42m File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/db/lpm_divide_42m.tdf Line: 25
-Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+    Info (12023): Found entity 1: lpm_divide_42m File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/db/lpm_divide_42m.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_7kh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_7kh File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/db/sign_div_unsign_7kh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kse.tdf
+    Info (12023): Found entity 1: alt_u_div_kse File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/db/alt_u_div_kse.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "ALU:alu1|Division:divisor|lpm_divide:Div0" File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Division.sv Line: 2
+Info (12133): Instantiated megafunction "ALU:alu1|Division:divisor|lpm_divide:Div0" with the following parameter: File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Division.sv Line: 2
+    Info (12134): Parameter "LPM_WIDTHN" = "4"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_1am.tdf
+    Info (12023): Found entity 1: lpm_divide_1am File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/db/lpm_divide_1am.tdf Line: 25
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "flags[0]" is stuck at GND File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 2
-    Warning (13410): Pin "flags[1]" is stuck at GND File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 2
-    Warning (13410): Pin "flags[2]" is stuck at GND File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 2
-    Warning (13410): Pin "flags[3]" is stuck at GND File: C:/Users/yraul/OneDrive/Documentos/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 2
+    Warning (13410): Pin "flags[0]" is stuck at GND File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 2
+    Warning (13410): Pin "flags[1]" is stuck at GND File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 2
+    Warning (13410): Pin "flags[2]" is stuck at GND File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 2
+    Warning (13410): Pin "flags[3]" is stuck at GND File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 2
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 89 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 94 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
     Info (21059): Implemented 8 output pins
-    Info (21061): Implemented 68 logic cells
+    Info (21061): Implemented 73 logic cells
     Info (21062): Implemented 1 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 4814 megabytes
-    Info: Processing ended: Sun Aug 28 10:23:03 2022
-    Info: Elapsed time: 00:00:49
-    Info: Total CPU time (on all processors): 00:01:25
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 4839 megabytes
+    Info: Processing ended: Thu Sep 01 10:27:39 2022
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:31
 
 

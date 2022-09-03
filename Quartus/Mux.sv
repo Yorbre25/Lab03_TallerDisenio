@@ -7,15 +7,15 @@ module Mux #(parameter N=4)(input [N-1:0] rSum, rRest, rMod, rMult, rDiv, rAnd, 
 		begin
 			case(seleccion)
 				0: salidaAux = rSum;
-				1: salidaAux = rRest;
-				2: salidaAux = rMod;
-				3: salidaAux = rMult;
+				1: salidaAux = rRest; 
+				2: salidaAux = rMult; 
+				3: salidaAux = rMod;
 				4: salidaAux = rDiv;
 				5: salidaAux = rAnd;
 				6: salidaAux = rOr;
 				7: salidaAux = rXor;
-				-8: salidaAux = rLShift;
-				-7: salidaAux = rRShift;
+				8: salidaAux = rLShift;
+				9: salidaAux = rRShift;
 				default: salidaAux = 1;
 			endcase
 		end
