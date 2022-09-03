@@ -11,14 +11,41 @@ seleccion[0] => seleccion[0].IN1
 seleccion[1] => seleccion[1].IN1
 seleccion[2] => seleccion[2].IN1
 seleccion[3] => seleccion[3].IN1
-salida[0] << Mux:mux1.port11
-salida[1] << Mux:mux1.port11
-salida[2] << Mux:mux1.port11
-salida[3] << Mux:mux1.port11
+outDisplay1[0] << DisplayHex:display1.port4
+outDisplay1[1] << DisplayHex:display1.port4
+outDisplay1[2] << DisplayHex:display1.port4
+outDisplay1[3] << DisplayHex:display1.port4
+outDisplay1[4] << DisplayHex:display1.port4
+outDisplay1[5] << DisplayHex:display1.port4
+outDisplay1[6] << DisplayHex:display1.port4
 flags[0] << <GND>
 flags[1] << <GND>
 flags[2] << <GND>
 flags[3] << <GND>
+seleccion_aux[0] << seleccion_aux[0].DB_MAX_OUTPUT_PORT_TYPE
+seleccion_aux[1] << seleccion_aux[1].DB_MAX_OUTPUT_PORT_TYPE
+seleccion_aux[2] << seleccion_aux[2].DB_MAX_OUTPUT_PORT_TYPE
+seleccion_aux[3] << seleccion_aux[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Calcu|Button_Switch:button1
+button => sAux.CLK
+s <= sAux.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Calcu|Button_Switch:button2
+button => sAux.CLK
+s <= sAux.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Calcu|Button_Switch:button3
+button => sAux.CLK
+s <= sAux.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Calcu|Button_Switch:button4
+button => sAux.CLK
+s <= sAux.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Calcu|ALU:alu1
@@ -275,5 +302,56 @@ salida[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
 salida[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
 salida[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 salida[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Calcu|DisplayHex:display1
+A => display.IN0
+A => display.IN0
+A => display.IN0
+A => display.IN0
+A => display.IN0
+A => display.IN0
+A => display.IN0
+B => display.IN0
+B => display.IN1
+B => display.IN1
+B => display.IN1
+B => display.IN0
+B => display.IN1
+C => display.IN1
+C => display.IN1
+C => display.IN1
+C => display.IN1
+C => display.IN1
+C => display.IN1
+C => display.IN1
+C => display.IN1
+C => display.IN1
+C => display.IN1
+C => display.IN1
+D => display.IN1
+D => display.IN1
+D => display.IN1
+D => display.IN1
+D => display.IN1
+D => display.IN1
+D => display.IN1
+D => display.IN1
+D => display.IN1
+D => display.IN1
+D => display.IN1
+D => display.IN1
+D => display.IN1
+D => display.IN1
+D => display.IN1
+D => display.IN1
+D => display.IN1
+display[0] <= display.DB_MAX_OUTPUT_PORT_TYPE
+display[1] <= display.DB_MAX_OUTPUT_PORT_TYPE
+display[2] <= display.DB_MAX_OUTPUT_PORT_TYPE
+display[3] <= display.DB_MAX_OUTPUT_PORT_TYPE
+display[4] <= display.DB_MAX_OUTPUT_PORT_TYPE
+display[5] <= display.DB_MAX_OUTPUT_PORT_TYPE
+display[6] <= display.DB_MAX_OUTPUT_PORT_TYPE
 
 

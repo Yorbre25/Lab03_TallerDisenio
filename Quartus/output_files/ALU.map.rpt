@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ALU
-Thu Sep 01 10:27:39 2022
+Sat Sep 03 14:53:02 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -60,14 +60,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Sep 01 10:27:39 2022       ;
+; Analysis & Synthesis Status     ; Successful - Sat Sep 03 14:53:02 2022       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; ALU                                         ;
 ; Top-level Entity Name           ; Calcu                                       ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 20                                          ;
+; Total registers                 ; 4                                           ;
+; Total pins                      ; 27                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 1                                           ;
@@ -176,10 +176,11 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -198,9 +199,11 @@ https://fpgasoftware.intel.com/eula.
 ; XorN.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/XorN.sv                    ;         ;
 ; ALU.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv                     ;         ;
 ; Calcu.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv                   ;         ;
+; DisplayHex.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/DisplayHex.sv              ;         ;
 ; Mux.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Mux.sv                     ;         ;
 ; LeftShift.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/LeftShift.sv               ;         ;
 ; RightShift.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/RightShift.sv              ;         ;
+; Button_Switch.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Button_Switch.sv           ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf                    ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc                   ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc               ;         ;
@@ -217,25 +220,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+------------+
 ; Resource                                    ; Usage      ;
 +---------------------------------------------+------------+
-; Estimate of Logic utilization (ALMs needed) ; 42         ;
+; Estimate of Logic utilization (ALMs needed) ; 47         ;
 ;                                             ;            ;
-; Combinational ALUT usage for logic          ; 73         ;
-;     -- 7 input functions                    ; 1          ;
-;     -- 6 input functions                    ; 9          ;
-;     -- 5 input functions                    ; 12         ;
-;     -- 4 input functions                    ; 15         ;
+; Combinational ALUT usage for logic          ; 82         ;
+;     -- 7 input functions                    ; 2          ;
+;     -- 6 input functions                    ; 10         ;
+;     -- 5 input functions                    ; 13         ;
+;     -- 4 input functions                    ; 21         ;
 ;     -- <=3 input functions                  ; 36         ;
 ;                                             ;            ;
-; Dedicated logic registers                   ; 0          ;
+; Dedicated logic registers                   ; 4          ;
 ;                                             ;            ;
-; I/O pins                                    ; 20         ;
+; I/O pins                                    ; 27         ;
 ;                                             ;            ;
 ; Total DSP Blocks                            ; 1          ;
 ;                                             ;            ;
 ; Maximum fan-out node                        ; b[3]~input ;
-; Maximum fan-out                             ; 22         ;
-; Total fan-out                               ; 301        ;
-; Average fan-out                             ; 2.64       ;
+; Maximum fan-out                             ; 26         ;
+; Total fan-out                               ; 360        ;
+; Average fan-out                             ; 2.55       ;
 +---------------------------------------------+------------+
 
 
@@ -244,21 +247,26 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                              ; Entity Name         ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |Calcu                                       ; 73 (0)              ; 0 (0)                     ; 0                 ; 1          ; 20   ; 0            ; |Calcu                                                                                                                           ; Calcu               ; work         ;
-;    |ALU:alu1|                                ; 61 (0)              ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Calcu|ALU:alu1                                                                                                                  ; ALU                 ; work         ;
-;       |Division:divisor|                     ; 23 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Division:divisor                                                                                                 ; Division            ; work         ;
-;          |lpm_divide:Div0|                   ; 23 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Division:divisor|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
-;             |lpm_divide_1am:auto_generated|  ; 23 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Division:divisor|lpm_divide:Div0|lpm_divide_1am:auto_generated                                                   ; lpm_divide_1am      ; work         ;
-;                |sign_div_unsign_7kh:divider| ; 23 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Division:divisor|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh ; work         ;
-;                   |alt_u_div_kse:divider|    ; 23 (23)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Division:divisor|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse       ; work         ;
+; |Calcu                                       ; 82 (0)              ; 4 (0)                     ; 0                 ; 1          ; 27   ; 0            ; |Calcu                                                                                                                           ; Calcu               ; work         ;
+;    |ALU:alu1|                                ; 59 (0)              ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Calcu|ALU:alu1                                                                                                                  ; ALU                 ; work         ;
+;       |Division:divisor|                     ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Division:divisor                                                                                                 ; Division            ; work         ;
+;          |lpm_divide:Div0|                   ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Division:divisor|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;             |lpm_divide_1am:auto_generated|  ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Division:divisor|lpm_divide:Div0|lpm_divide_1am:auto_generated                                                   ; lpm_divide_1am      ; work         ;
+;                |sign_div_unsign_7kh:divider| ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Division:divisor|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh ; work         ;
+;                   |alt_u_div_kse:divider|    ; 22 (22)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Division:divisor|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse       ; work         ;
 ;       |Modulo:modulador|                     ; 24 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Modulo:modulador                                                                                                 ; Modulo              ; work         ;
 ;          |lpm_divide:Mod0|                   ; 24 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Modulo:modulador|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
 ;             |lpm_divide_42m:auto_generated|  ; 24 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Modulo:modulador|lpm_divide:Mod0|lpm_divide_42m:auto_generated                                                   ; lpm_divide_42m      ; work         ;
 ;                |sign_div_unsign_7kh:divider| ; 24 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Modulo:modulador|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh ; work         ;
 ;                   |alt_u_div_kse:divider|    ; 24 (24)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Modulo:modulador|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse       ; work         ;
 ;       |Multiplicacion:multiplicador|         ; 0 (0)               ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Calcu|ALU:alu1|Multiplicacion:multiplicador                                                                                     ; Multiplicacion      ; work         ;
-;       |OrN:orer|                             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|OrN:orer                                                                                                         ; OrN                 ; work         ;
+;       |OrN:orer|                             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|OrN:orer                                                                                                         ; OrN                 ; work         ;
 ;       |Resta:restador|                       ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|ALU:alu1|Resta:restador                                                                                                   ; Resta               ; work         ;
+;    |Button_Switch:button1|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|Button_Switch:button1                                                                                                     ; Button_Switch       ; work         ;
+;    |Button_Switch:button2|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|Button_Switch:button2                                                                                                     ; Button_Switch       ; work         ;
+;    |Button_Switch:button3|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|Button_Switch:button3                                                                                                     ; Button_Switch       ; work         ;
+;    |Button_Switch:button4|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|Button_Switch:button4                                                                                                     ; Button_Switch       ; work         ;
+;    |DisplayHex:display1|                     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|DisplayHex:display1                                                                                                       ; DisplayHex          ; work         ;
 ;    |Mux:mux1|                                ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Calcu|Mux:mux1                                                                                                                  ; Mux                 ; work         ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -281,7 +289,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 4     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -481,31 +489,34 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 74                          ;
+; arriav_ff             ; 4                           ;
+;     plain             ; 4                           ;
+; arriav_lcell_comb     ; 83                          ;
 ;     arith             ; 17                          ;
 ;         0 data inputs ; 4                           ;
 ;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 2                           ;
 ;         3 data inputs ; 4                           ;
 ;         5 data inputs ; 6                           ;
-;     extend            ; 1                           ;
-;         7 data inputs ; 1                           ;
-;     normal            ; 38                          ;
+;     extend            ; 2                           ;
+;         7 data inputs ; 2                           ;
+;     normal            ; 46                          ;
 ;         0 data inputs ; 1                           ;
-;         2 data inputs ; 6                           ;
-;         3 data inputs ; 7                           ;
-;         4 data inputs ; 9                           ;
-;         5 data inputs ; 6                           ;
-;         6 data inputs ; 9                           ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 6                           ;
+;         4 data inputs ; 15                          ;
+;         5 data inputs ; 7                           ;
+;         6 data inputs ; 10                          ;
 ;     shared            ; 18                          ;
 ;         0 data inputs ; 6                           ;
 ;         2 data inputs ; 6                           ;
 ;         4 data inputs ; 6                           ;
 ; arriav_mac            ; 1                           ;
-; boundary_port         ; 20                          ;
+; boundary_port         ; 27                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 10.50                       ;
-; Average LUT depth     ; 7.88                        ;
+; Max LUT depth         ; 11.50                       ;
+; Average LUT depth     ; 8.54                        ;
 +-----------------------+-----------------------------+
 
 
@@ -524,7 +535,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Sep 01 10:27:26 2022
+    Info: Processing started: Sat Sep 03 14:52:47 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -547,7 +558,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file xorn.sv
 Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
     Info (12023): Found entity 1: ALU File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file calcu.sv
-    Info (12023): Found entity 1: Calcu File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 2
+    Info (12023): Found entity 1: Calcu File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file displayhex.sv
     Info (12023): Found entity 1: DisplayHex File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/DisplayHex.sv Line: 2
 Warning (12090): Entity "Mux" obtained from "Mux.sv" instead of from Quartus Prime megafunction library File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Mux.sv Line: 3
@@ -561,9 +572,12 @@ Info (12021): Found 1 design units, including 1 entities, in source file rightsh
     Info (12023): Found entity 1: RightShift File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/RightShift.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file comparador.sv
     Info (12023): Found entity 1: Comparador File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Comparador.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file button_switch.sv
+    Info (12023): Found entity 1: Button_Switch File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Button_Switch.sv Line: 1
 Info (12127): Elaborating entity "Calcu" for the top level hierarchy
-Warning (10034): Output port "flags" at Calcu.sv(2) has no driver File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 2
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu1" File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 7
+Warning (10034): Output port "flags" at Calcu.sv(1) has no driver File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 1
+Info (12128): Elaborating entity "Button_Switch" for hierarchy "Button_Switch:button1" File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 8
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu1" File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 13
 Info (12128): Elaborating entity "Suma" for hierarchy "ALU:alu1|Suma:sumador" File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 4
 Info (12128): Elaborating entity "Resta" for hierarchy "ALU:alu1|Resta:restador" File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 5
 Info (12128): Elaborating entity "Modulo" for hierarchy "ALU:alu1|Modulo:modulador" File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 6
@@ -574,7 +588,8 @@ Info (12128): Elaborating entity "OrN" for hierarchy "ALU:alu1|OrN:orer" File: C
 Info (12128): Elaborating entity "XorN" for hierarchy "ALU:alu1|XorN:xorer" File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 12
 Info (12128): Elaborating entity "LeftShift" for hierarchy "ALU:alu1|LeftShift:lShifter" File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 13
 Info (12128): Elaborating entity "RightShift" for hierarchy "ALU:alu1|RightShift:rShifter" File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/ALU.sv Line: 14
-Info (12128): Elaborating entity "Mux" for hierarchy "Mux:mux1" File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 8
+Info (12128): Elaborating entity "Mux" for hierarchy "Mux:mux1" File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 14
+Info (12128): Elaborating entity "DisplayHex" for hierarchy "DisplayHex:display1" File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 15
 Info (278001): Inferred 2 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ALU:alu1|Modulo:modulador|Mod0" File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Modulo.sv Line: 2
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ALU:alu1|Division:divisor|Div0" File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Division.sv Line: 2
@@ -599,22 +614,22 @@ Info (12133): Instantiated megafunction "ALU:alu1|Division:divisor|lpm_divide:Di
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_1am.tdf
     Info (12023): Found entity 1: lpm_divide_1am File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/db/lpm_divide_1am.tdf Line: 25
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "flags[0]" is stuck at GND File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 2
-    Warning (13410): Pin "flags[1]" is stuck at GND File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 2
-    Warning (13410): Pin "flags[2]" is stuck at GND File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 2
-    Warning (13410): Pin "flags[3]" is stuck at GND File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 2
+    Warning (13410): Pin "flags[0]" is stuck at GND File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 1
+    Warning (13410): Pin "flags[1]" is stuck at GND File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 1
+    Warning (13410): Pin "flags[2]" is stuck at GND File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 1
+    Warning (13410): Pin "flags[3]" is stuck at GND File: C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Quartus/Calcu.sv Line: 1
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 94 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 110 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
-    Info (21059): Implemented 8 output pins
-    Info (21061): Implemented 73 logic cells
+    Info (21059): Implemented 15 output pins
+    Info (21061): Implemented 82 logic cells
     Info (21062): Implemented 1 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 4839 megabytes
-    Info: Processing ended: Thu Sep 01 10:27:39 2022
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:31
+    Info: Peak virtual memory: 4858 megabytes
+    Info: Processing ended: Sat Sep 03 14:53:02 2022
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:34
 
 
