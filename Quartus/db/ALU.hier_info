@@ -2,26 +2,26 @@
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
-a[3] => a[3].IN1
+a[3] => a[3].IN2
 b[0] => b[0].IN1
 b[1] => b[1].IN1
 b[2] => b[2].IN1
-b[3] => b[3].IN1
+b[3] => b[3].IN2
 seleccion[0] => seleccion[0].IN1
 seleccion[1] => seleccion[1].IN1
 seleccion[2] => seleccion[2].IN1
 seleccion[3] => seleccion[3].IN1
-outDisplay1[0] << DisplayHex:display1.port4
-outDisplay1[1] << DisplayHex:display1.port4
-outDisplay1[2] << DisplayHex:display1.port4
-outDisplay1[3] << DisplayHex:display1.port4
-outDisplay1[4] << DisplayHex:display1.port4
-outDisplay1[5] << DisplayHex:display1.port4
-outDisplay1[6] << DisplayHex:display1.port4
-flags[0] << <GND>
-flags[1] << <GND>
-flags[2] << <GND>
-flags[3] << <GND>
+outDisplay[0] << DisplayHex:display2.port4
+outDisplay[1] << DisplayHex:display2.port4
+outDisplay[2] << DisplayHex:display2.port4
+outDisplay[3] << DisplayHex:display2.port4
+outDisplay[4] << DisplayHex:display2.port4
+outDisplay[5] << DisplayHex:display2.port4
+outDisplay[6] << DisplayHex:display2.port4
+flags[0] << flag_detector:flag_dec.port4
+flags[1] << flag_detector:flag_dec.port4
+flags[2] << flag_detector:flag_dec.port4
+flags[3] << flag_detector:flag_dec.port4
 seleccion_aux[0] << seleccion_aux[0].DB_MAX_OUTPUT_PORT_TYPE
 seleccion_aux[1] << seleccion_aux[1].DB_MAX_OUTPUT_PORT_TYPE
 seleccion_aux[2] << seleccion_aux[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -61,42 +61,52 @@ rSum[0] <= Suma:sumador.port2
 rSum[1] <= Suma:sumador.port2
 rSum[2] <= Suma:sumador.port2
 rSum[3] <= Suma:sumador.port2
+rSum[4] <= Suma:sumador.port2
 rRest[0] <= Resta:restador.port2
 rRest[1] <= Resta:restador.port2
 rRest[2] <= Resta:restador.port2
 rRest[3] <= Resta:restador.port2
+rRest[4] <= Resta:restador.port2
 rMod[0] <= Modulo:modulador.port2
 rMod[1] <= Modulo:modulador.port2
 rMod[2] <= Modulo:modulador.port2
 rMod[3] <= Modulo:modulador.port2
+rMod[4] <= Modulo:modulador.port2
 rMult[0] <= Multiplicacion:multiplicador.port2
 rMult[1] <= Multiplicacion:multiplicador.port2
 rMult[2] <= Multiplicacion:multiplicador.port2
 rMult[3] <= Multiplicacion:multiplicador.port2
+rMult[4] <= Multiplicacion:multiplicador.port2
 rDiv[0] <= Division:divisor.port2
 rDiv[1] <= Division:divisor.port2
 rDiv[2] <= Division:divisor.port2
 rDiv[3] <= Division:divisor.port2
+rDiv[4] <= Division:divisor.port2
 rAnd[0] <= AndN:ander.port2
 rAnd[1] <= AndN:ander.port2
 rAnd[2] <= AndN:ander.port2
 rAnd[3] <= AndN:ander.port2
+rAnd[4] <= AndN:ander.port2
 rOr[0] <= OrN:orer.port2
 rOr[1] <= OrN:orer.port2
 rOr[2] <= OrN:orer.port2
 rOr[3] <= OrN:orer.port2
+rOr[4] <= OrN:orer.port2
 rXor[0] <= XorN:xorer.port2
 rXor[1] <= XorN:xorer.port2
 rXor[2] <= XorN:xorer.port2
 rXor[3] <= XorN:xorer.port2
+rXor[4] <= XorN:xorer.port2
 rLShift[0] <= LeftShift:lShifter.port1
 rLShift[1] <= LeftShift:lShifter.port1
 rLShift[2] <= LeftShift:lShifter.port1
 rLShift[3] <= LeftShift:lShifter.port1
+rLShift[4] <= LeftShift:lShifter.port1
 rRShift[0] <= RightShift:rShifter.port1
 rRShift[1] <= RightShift:rShifter.port1
 rRShift[2] <= RightShift:rShifter.port1
 rRShift[3] <= RightShift:rShifter.port1
+rRShift[4] <= RightShift:rShifter.port1
 
 
 |Calcu|ALU:alu1|Suma:sumador
@@ -112,6 +122,7 @@ S[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 S[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 S[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 S[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Calcu|ALU:alu1|Resta:restador
@@ -127,6 +138,7 @@ S[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 S[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 S[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 S[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Calcu|ALU:alu1|Modulo:modulador
@@ -142,6 +154,7 @@ S[0] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
 S[1] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
 S[2] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
 S[3] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= <GND>
 
 
 |Calcu|ALU:alu1|Multiplicacion:multiplicador
@@ -157,6 +170,7 @@ S[0] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
 S[1] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
 S[2] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
 S[3] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Calcu|ALU:alu1|Division:divisor
@@ -172,6 +186,7 @@ S[0] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
 S[1] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
 S[2] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
 S[3] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= <GND>
 
 
 |Calcu|ALU:alu1|AndN:ander
@@ -187,6 +202,7 @@ S[0] <= S.DB_MAX_OUTPUT_PORT_TYPE
 S[1] <= S.DB_MAX_OUTPUT_PORT_TYPE
 S[2] <= S.DB_MAX_OUTPUT_PORT_TYPE
 S[3] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= <GND>
 
 
 |Calcu|ALU:alu1|OrN:orer
@@ -202,6 +218,7 @@ S[0] <= S.DB_MAX_OUTPUT_PORT_TYPE
 S[1] <= S.DB_MAX_OUTPUT_PORT_TYPE
 S[2] <= S.DB_MAX_OUTPUT_PORT_TYPE
 S[3] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= <GND>
 
 
 |Calcu|ALU:alu1|XorN:xorer
@@ -217,17 +234,19 @@ S[0] <= S.DB_MAX_OUTPUT_PORT_TYPE
 S[1] <= S.DB_MAX_OUTPUT_PORT_TYPE
 S[2] <= S.DB_MAX_OUTPUT_PORT_TYPE
 S[3] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= <GND>
 
 
 |Calcu|ALU:alu1|LeftShift:lShifter
 A[0] => S[1].DATAIN
 A[1] => S[2].DATAIN
 A[2] => S[3].DATAIN
-A[3] => ~NO_FANOUT~
+A[3] => S[4].DATAIN
 S[0] <= <GND>
 S[1] <= A[0].DB_MAX_OUTPUT_PORT_TYPE
 S[2] <= A[1].DB_MAX_OUTPUT_PORT_TYPE
 S[3] <= A[2].DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= A[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Calcu|ALU:alu1|RightShift:rShifter
@@ -239,72 +258,88 @@ S[0] <= A[1].DB_MAX_OUTPUT_PORT_TYPE
 S[1] <= A[2].DB_MAX_OUTPUT_PORT_TYPE
 S[2] <= A[3].DB_MAX_OUTPUT_PORT_TYPE
 S[3] <= <GND>
+S[4] <= <GND>
 
 
 |Calcu|Mux:mux1
-rSum[0] => Mux3.IN6
-rSum[1] => Mux2.IN6
-rSum[2] => Mux1.IN6
-rSum[3] => Mux0.IN6
-rRest[0] => Mux3.IN7
-rRest[1] => Mux2.IN7
-rRest[2] => Mux1.IN7
-rRest[3] => Mux0.IN7
-rMod[0] => Mux3.IN8
-rMod[1] => Mux2.IN8
-rMod[2] => Mux1.IN8
-rMod[3] => Mux0.IN8
-rMult[0] => Mux3.IN9
-rMult[1] => Mux2.IN9
-rMult[2] => Mux1.IN9
-rMult[3] => Mux0.IN9
-rDiv[0] => Mux3.IN10
-rDiv[1] => Mux2.IN10
-rDiv[2] => Mux1.IN10
-rDiv[3] => Mux0.IN10
-rAnd[0] => Mux3.IN11
-rAnd[1] => Mux2.IN11
-rAnd[2] => Mux1.IN11
-rAnd[3] => Mux0.IN11
-rOr[0] => Mux3.IN12
-rOr[1] => Mux2.IN12
-rOr[2] => Mux1.IN12
-rOr[3] => Mux0.IN12
-rXor[0] => Mux3.IN13
-rXor[1] => Mux2.IN13
-rXor[2] => Mux1.IN13
-rXor[3] => Mux0.IN13
-rLShift[0] => Mux3.IN14
-rLShift[1] => Mux2.IN14
-rLShift[2] => Mux1.IN14
-rLShift[3] => Mux0.IN14
-rRShift[0] => Mux3.IN15
-rRShift[1] => Mux2.IN15
-rRShift[2] => Mux1.IN15
-rRShift[3] => Mux0.IN15
+rSum[0] => Mux4.IN6
+rSum[1] => Mux3.IN6
+rSum[2] => Mux2.IN6
+rSum[3] => Mux1.IN6
+rSum[4] => Mux0.IN6
+rRest[0] => Mux4.IN7
+rRest[1] => Mux3.IN7
+rRest[2] => Mux2.IN7
+rRest[3] => Mux1.IN7
+rRest[4] => Mux0.IN7
+rMod[0] => Mux4.IN8
+rMod[1] => Mux3.IN8
+rMod[2] => Mux2.IN8
+rMod[3] => Mux1.IN8
+rMod[4] => Mux0.IN8
+rMult[0] => Mux4.IN9
+rMult[1] => Mux3.IN9
+rMult[2] => Mux2.IN9
+rMult[3] => Mux1.IN9
+rMult[4] => Mux0.IN9
+rDiv[0] => Mux4.IN10
+rDiv[1] => Mux3.IN10
+rDiv[2] => Mux2.IN10
+rDiv[3] => Mux1.IN10
+rDiv[4] => Mux0.IN10
+rAnd[0] => Mux4.IN11
+rAnd[1] => Mux3.IN11
+rAnd[2] => Mux2.IN11
+rAnd[3] => Mux1.IN11
+rAnd[4] => Mux0.IN11
+rOr[0] => Mux4.IN12
+rOr[1] => Mux3.IN12
+rOr[2] => Mux2.IN12
+rOr[3] => Mux1.IN12
+rOr[4] => Mux0.IN12
+rXor[0] => Mux4.IN13
+rXor[1] => Mux3.IN13
+rXor[2] => Mux2.IN13
+rXor[3] => Mux1.IN13
+rXor[4] => Mux0.IN13
+rLShift[0] => Mux4.IN14
+rLShift[1] => Mux3.IN14
+rLShift[2] => Mux2.IN14
+rLShift[3] => Mux1.IN14
+rLShift[4] => Mux0.IN14
+rRShift[0] => Mux4.IN15
+rRShift[1] => Mux3.IN15
+rRShift[2] => Mux2.IN15
+rRShift[3] => Mux1.IN15
+rRShift[4] => Mux0.IN15
 seleccion[0] => Mux0.IN19
 seleccion[0] => Mux1.IN19
 seleccion[0] => Mux2.IN19
 seleccion[0] => Mux3.IN19
+seleccion[0] => Mux4.IN19
 seleccion[1] => Mux0.IN18
 seleccion[1] => Mux1.IN18
 seleccion[1] => Mux2.IN18
 seleccion[1] => Mux3.IN18
+seleccion[1] => Mux4.IN18
 seleccion[2] => Mux0.IN17
 seleccion[2] => Mux1.IN17
 seleccion[2] => Mux2.IN17
 seleccion[2] => Mux3.IN17
+seleccion[2] => Mux4.IN17
 seleccion[3] => Mux0.IN16
 seleccion[3] => Mux1.IN16
 seleccion[3] => Mux2.IN16
 seleccion[3] => Mux3.IN16
-salida[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
-salida[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
-salida[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
-salida[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+seleccion[3] => Mux4.IN16
+salida[0] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+salida[1] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+salida[2] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+salida[3] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+salida[4] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Calcu|DisplayHex:display1
+|Calcu|DisplayHex:display2
 A => display.IN0
 A => display.IN0
 A => display.IN0
@@ -353,5 +388,57 @@ display[3] <= display.DB_MAX_OUTPUT_PORT_TYPE
 display[4] <= display.DB_MAX_OUTPUT_PORT_TYPE
 display[5] <= display.DB_MAX_OUTPUT_PORT_TYPE
 display[6] <= display.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Calcu|flag_detector:flag_dec
+seleccion[0] => seleccion[0].IN1
+seleccion[1] => seleccion[1].IN1
+seleccion[2] => seleccion[2].IN1
+seleccion[3] => seleccion[3].IN1
+a0 => a0.IN1
+b0 => b0.IN1
+salida[0] => Equal0.IN31
+salida[1] => Equal0.IN30
+salida[2] => Equal0.IN29
+salida[3] => salida[3].IN1
+salida[4] => flag1.DATAB
+salida[4] => Equal0.IN27
+flags[0] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+flags[1] <= flag1.DB_MAX_OUTPUT_PORT_TYPE
+flags[2] <= flag2.DB_MAX_OUTPUT_PORT_TYPE
+flags[3] <= flag3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Calcu|flag_detector:flag_dec|Overflow:overflow
+a0 => overflow.IN1
+a0 => overflow.IN1
+a0 => overflow.IN1
+a0 => overflow.IN1
+a0 => overflow.IN1
+a0 => overflow.IN0
+b0 => overflow.IN1
+b0 => overflow.IN1
+b0 => overflow.IN1
+b0 => overflow.IN1
+b0 => overflow.IN1
+b0 => overflow.IN1
+b0 => overflow.IN1
+s0 => overflow.IN1
+s0 => overflow.IN1
+s0 => overflow.IN1
+s0 => overflow.IN1
+s0 => overflow.IN1
+s0 => overflow.IN1
+s0 => overflow.IN1
+seleccion[0] => overflow.IN0
+seleccion[0] => overflow.IN0
+seleccion[0] => overflow.IN0
+seleccion[0] => overflow.IN1
+seleccion[1] => overflow.IN1
+seleccion[1] => overflow.IN1
+seleccion[1] => overflow.IN1
+seleccion[2] => ~NO_FANOUT~
+seleccion[3] => ~NO_FANOUT~
+overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
 
 

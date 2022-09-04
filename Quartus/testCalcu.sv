@@ -1,13 +1,13 @@
 module testCalcu();
-	logic [3:0] a, b, seleccion, salida, flags;
+	logic [3:0] a, b, seleccion, salida, flags, seleccion_aux;
 	logic [6:0] outDisplay1;
 	
-	Calcu #(.N(4)) calculadora (a, b, seleccion, salida, flags);
+	Calcu #(.N(4)) calculadora (a, b, seleccion, outDisplay1, flags, seleccion_aux);
 	
 	
 	initial begin
-	a = 3;
-	b = -2;
+	a = 0;
+	b = 0;
 	seleccion = 0; #5;
 	seleccion = 1; #5;
 	seleccion = 2; #5;
