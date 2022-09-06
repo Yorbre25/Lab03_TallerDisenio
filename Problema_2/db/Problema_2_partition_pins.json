@@ -8,6 +8,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "outDisplay[1]",
+					"strict" : false
+				},
+				{
+					"name" : "outDisplay[2]",
+					"strict" : false
+				},
+				{
 					"name" : "outDisplay[3]",
 					"strict" : false
 				},
@@ -17,6 +25,26 @@
 				},
 				{
 					"name" : "outDisplay[5]",
+					"strict" : false
+				},
+				{
+					"name" : "outDisplay[6]",
+					"strict" : false
+				},
+				{
+					"name" : "flags[0]",
+					"strict" : false
+				},
+				{
+					"name" : "flags[1]",
+					"strict" : false
+				},
+				{
+					"name" : "flags[2]",
+					"strict" : false
+				},
+				{
+					"name" : "flags[3]",
 					"strict" : false
 				},
 				{
@@ -33,10 +61,6 @@
 				},
 				{
 					"name" : "seleccion_aux[3]",
-					"strict" : false
-				},
-				{
-					"name" : "salida[0]",
 					"strict" : false
 				},
 				{
@@ -64,7 +88,35 @@
 					"strict" : false
 				},
 				{
+					"name" : "a[3]",
+					"strict" : false
+				},
+				{
+					"name" : "b[3]",
+					"strict" : false
+				},
+				{
+					"name" : "b[2]",
+					"strict" : false
+				},
+				{
+					"name" : "b[1]",
+					"strict" : false
+				},
+				{
+					"name" : "a[2]",
+					"strict" : false
+				},
+				{
+					"name" : "a[1]",
+					"strict" : false
+				},
+				{
 					"name" : "a[0]",
+					"strict" : false
+				},
+				{
+					"name" : "b[0]",
 					"strict" : false
 				}
 			]

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Problema_2
-Mon Sep 05 19:07:00 2022
+Mon Sep 05 19:41:41 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,26 +13,31 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |RegistroCargaTop
- 10. Parameter Settings for User Entity Instance: RegistroCargaInput:regCargaIn
- 11. Parameter Settings for User Entity Instance: ALU:alu_
- 12. Parameter Settings for User Entity Instance: ALU:alu_|Suma:sumador
- 13. Parameter Settings for User Entity Instance: ALU:alu_|Resta:restador
- 14. Parameter Settings for User Entity Instance: ALU:alu_|Modulo:modulador
- 15. Parameter Settings for User Entity Instance: ALU:alu_|Multiplicacion:multiplicador
- 16. Parameter Settings for User Entity Instance: ALU:alu_|Division:divisor
- 17. Parameter Settings for User Entity Instance: ALU:alu_|AndN:ander
- 18. Parameter Settings for User Entity Instance: ALU:alu_|OrN:orer
- 19. Parameter Settings for User Entity Instance: ALU:alu_|XorN:xorer
- 20. Parameter Settings for User Entity Instance: ALU:alu_|LeftShift:lShifter
- 21. Parameter Settings for User Entity Instance: ALU:alu_|RightShift:rShifter
- 22. Parameter Settings for User Entity Instance: Mux:mux_
- 23. Parameter Settings for User Entity Instance: flag_detector:flag_dec
- 24. Parameter Settings for User Entity Instance: RegistroCargaOutput:regCargaOut
- 25. Post-Synthesis Netlist Statistics for Top Partition
- 26. Elapsed Time Per Partition
- 27. Analysis & Synthesis Messages
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |RegistroCargaTop
+ 12. Parameter Settings for User Entity Instance: RegistroCargaInput:regCargaIn
+ 13. Parameter Settings for User Entity Instance: ALU:alu_
+ 14. Parameter Settings for User Entity Instance: ALU:alu_|Suma:sumador
+ 15. Parameter Settings for User Entity Instance: ALU:alu_|Resta:restador
+ 16. Parameter Settings for User Entity Instance: ALU:alu_|Modulo:modulador
+ 17. Parameter Settings for User Entity Instance: ALU:alu_|Multiplicacion:multiplicador
+ 18. Parameter Settings for User Entity Instance: ALU:alu_|Division:divisor
+ 19. Parameter Settings for User Entity Instance: ALU:alu_|AndN:ander
+ 20. Parameter Settings for User Entity Instance: ALU:alu_|OrN:orer
+ 21. Parameter Settings for User Entity Instance: ALU:alu_|XorN:xorer
+ 22. Parameter Settings for User Entity Instance: ALU:alu_|LeftShift:lShifter
+ 23. Parameter Settings for User Entity Instance: ALU:alu_|RightShift:rShifter
+ 24. Parameter Settings for User Entity Instance: Mux:mux_
+ 25. Parameter Settings for User Entity Instance: flag_detector:flag_dec
+ 26. Parameter Settings for User Entity Instance: RegistroCargaOutput:regCargaOut
+ 27. Parameter Settings for Inferred Entity Instance: ALU:alu_|Division:divisor|lpm_divide:Div0
+ 28. Parameter Settings for Inferred Entity Instance: ALU:alu_|Modulo:modulador|lpm_divide:Mod0
+ 29. Port Connectivity Checks: "RegistroCargaOutput:regCargaOut"
+ 30. Post-Synthesis Netlist Statistics for Top Partition
+ 31. Elapsed Time Per Partition
+ 32. Analysis & Synthesis Messages
 
 
 
@@ -59,17 +64,17 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Sep 05 19:07:00 2022       ;
+; Analysis & Synthesis Status     ; Successful - Mon Sep 05 19:41:41 2022       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; Problema_2                                  ;
 ; Top-level Entity Name           ; RegistroCargaTop                            ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 6                                           ;
-; Total pins                      ; 34                                          ;
+; Total registers                 ; 24                                          ;
+; Total pins                      ; 29                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
+; Total DSP Blocks                ; 1                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
@@ -183,74 +188,112 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                              ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                          ; Library ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------+---------+
-; XorN.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/XorN.sv               ;         ;
-; Suma.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Suma.sv               ;         ;
-; RightShift.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RightShift.sv         ;         ;
-; Resta.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Resta.sv              ;         ;
-; Overflow.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Overflow.sv           ;         ;
-; OrN.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/OrN.sv                ;         ;
-; Mux.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Mux.sv                ;         ;
-; Multiplicacion.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Multiplicacion.sv     ;         ;
-; Modulo.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Modulo.sv             ;         ;
-; LeftShift.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/LeftShift.sv          ;         ;
-; flag_detector.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/flag_detector.sv      ;         ;
-; Division.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Division.sv           ;         ;
-; DisplayHex.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/DisplayHex.sv         ;         ;
-; Button_Switch.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Button_Switch.sv      ;         ;
-; AndN.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/AndN.sv               ;         ;
-; ALU.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/ALU.sv                ;         ;
-; RegistroCargaInput.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaInput.sv ;         ;
-; RegistroCargaOuput.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaOuput.sv ;         ;
-; RegistroCargaTop.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTop.sv   ;         ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                               ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------+---------+
+; XorN.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/XorN.sv                    ;         ;
+; Suma.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Suma.sv                    ;         ;
+; RightShift.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RightShift.sv              ;         ;
+; Resta.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Resta.sv                   ;         ;
+; Overflow.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Overflow.sv                ;         ;
+; OrN.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/OrN.sv                     ;         ;
+; Mux.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Mux.sv                     ;         ;
+; Multiplicacion.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Multiplicacion.sv          ;         ;
+; Modulo.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Modulo.sv                  ;         ;
+; LeftShift.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/LeftShift.sv               ;         ;
+; flag_detector.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/flag_detector.sv           ;         ;
+; Division.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Division.sv                ;         ;
+; DisplayHex.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/DisplayHex.sv              ;         ;
+; Button_Switch.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Button_Switch.sv           ;         ;
+; AndN.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/AndN.sv                    ;         ;
+; ALU.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/ALU.sv                     ;         ;
+; RegistroCargaInput.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaInput.sv      ;         ;
+; RegistroCargaOuput.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaOuput.sv      ;         ;
+; RegistroCargaTop.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTop.sv        ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; d:/programas/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf            ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; d:/programas/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc           ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; d:/programas/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc       ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                 ; d:/programas/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc            ;         ;
+; db/lpm_divide_1am.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/db/lpm_divide_1am.tdf      ;         ;
+; db/sign_div_unsign_7kh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/db/sign_div_unsign_7kh.tdf ;         ;
+; db/alt_u_div_kse.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/db/alt_u_div_kse.tdf       ;         ;
+; db/lpm_divide_42m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/db/lpm_divide_42m.tdf      ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                        ;
-+---------------------------------------------+--------------------------------------+
-; Resource                                    ; Usage                                ;
-+---------------------------------------------+--------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 3                                    ;
-;                                             ;                                      ;
-; Combinational ALUT usage for logic          ; 4                                    ;
-;     -- 7 input functions                    ; 0                                    ;
-;     -- 6 input functions                    ; 0                                    ;
-;     -- 5 input functions                    ; 0                                    ;
-;     -- 4 input functions                    ; 0                                    ;
-;     -- <=3 input functions                  ; 4                                    ;
-;                                             ;                                      ;
-; Dedicated logic registers                   ; 6                                    ;
-;                                             ;                                      ;
-; I/O pins                                    ; 34                                   ;
-;                                             ;                                      ;
-; Total DSP Blocks                            ; 0                                    ;
-;                                             ;                                      ;
-; Maximum fan-out node                        ; RegistroCargaOutput:regCargaOut|saux ;
-; Maximum fan-out                             ; 5                                    ;
-; Total fan-out                               ; 61                                   ;
-; Average fan-out                             ; 0.78                                 ;
-+---------------------------------------------+--------------------------------------+
++-------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                         ;
++---------------------------------------------+---------------------------------------+
+; Resource                                    ; Usage                                 ;
++---------------------------------------------+---------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 57                                    ;
+;                                             ;                                       ;
+; Combinational ALUT usage for logic          ; 95                                    ;
+;     -- 7 input functions                    ; 5                                     ;
+;     -- 6 input functions                    ; 11                                    ;
+;     -- 5 input functions                    ; 12                                    ;
+;     -- 4 input functions                    ; 24                                    ;
+;     -- <=3 input functions                  ; 43                                    ;
+;                                             ;                                       ;
+; Dedicated logic registers                   ; 24                                    ;
+;                                             ;                                       ;
+; I/O pins                                    ; 29                                    ;
+;                                             ;                                       ;
+; Total DSP Blocks                            ; 1                                     ;
+;                                             ;                                       ;
+; Maximum fan-out node                        ; RegistroCargaInput:regCargaIn|saux[7] ;
+; Maximum fan-out                             ; 23                                    ;
+; Total fan-out                               ; 476                                   ;
+; Average fan-out                             ; 2.67                                  ;
++---------------------------------------------+---------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                    ;
-+--------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node           ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                               ; Entity Name         ; Library Name ;
-+--------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------+---------------------+--------------+
-; |RegistroCargaTop                    ; 4 (0)               ; 6 (0)                     ; 0                 ; 0          ; 34   ; 0            ; |RegistroCargaTop                                 ; RegistroCargaTop    ; work         ;
-;    |Button_Switch:button1|           ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |RegistroCargaTop|Button_Switch:button1           ; Button_Switch       ; work         ;
-;    |Button_Switch:button2|           ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |RegistroCargaTop|Button_Switch:button2           ; Button_Switch       ; work         ;
-;    |Button_Switch:button3|           ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |RegistroCargaTop|Button_Switch:button3           ; Button_Switch       ; work         ;
-;    |Button_Switch:button4|           ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |RegistroCargaTop|Button_Switch:button4           ; Button_Switch       ; work         ;
-;    |RegistroCargaInput:regCargaIn|   ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |RegistroCargaTop|RegistroCargaInput:regCargaIn   ; RegistroCargaInput  ; work         ;
-;    |RegistroCargaOutput:regCargaOut| ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |RegistroCargaTop|RegistroCargaOutput:regCargaOut ; RegistroCargaOutput ; work         ;
-+--------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------+---------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                      ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                         ; Entity Name         ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |RegistroCargaTop                            ; 95 (0)              ; 24 (0)                    ; 0                 ; 1          ; 29   ; 0            ; |RegistroCargaTop                                                                                                                           ; RegistroCargaTop    ; work         ;
+;    |ALU:alu_|                                ; 53 (0)              ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_                                                                                                                  ; ALU                 ; work         ;
+;       |Division:divisor|                     ; 23 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|Division:divisor                                                                                                 ; Division            ; work         ;
+;          |lpm_divide:Div0|                   ; 23 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|Division:divisor|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;             |lpm_divide_1am:auto_generated|  ; 23 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|Division:divisor|lpm_divide:Div0|lpm_divide_1am:auto_generated                                                   ; lpm_divide_1am      ; work         ;
+;                |sign_div_unsign_7kh:divider| ; 23 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|Division:divisor|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh ; work         ;
+;                   |alt_u_div_kse:divider|    ; 23 (23)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|Division:divisor|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse       ; work         ;
+;       |Modulo:modulador|                     ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|Modulo:modulador                                                                                                 ; Modulo              ; work         ;
+;          |lpm_divide:Mod0|                   ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|Modulo:modulador|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;             |lpm_divide_42m:auto_generated|  ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|Modulo:modulador|lpm_divide:Mod0|lpm_divide_42m:auto_generated                                                   ; lpm_divide_42m      ; work         ;
+;                |sign_div_unsign_7kh:divider| ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|Modulo:modulador|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh ; work         ;
+;                   |alt_u_div_kse:divider|    ; 22 (22)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|Modulo:modulador|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse       ; work         ;
+;       |Multiplicacion:multiplicador|         ; 0 (0)               ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|Multiplicacion:multiplicador                                                                                     ; Multiplicacion      ; work         ;
+;       |OrN:orer|                             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|OrN:orer                                                                                                         ; OrN                 ; work         ;
+;       |Resta:restador|                       ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|Resta:restador                                                                                                   ; Resta               ; work         ;
+;    |Button_Switch:button1|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |RegistroCargaTop|Button_Switch:button1                                                                                                     ; Button_Switch       ; work         ;
+;    |Button_Switch:button2|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |RegistroCargaTop|Button_Switch:button2                                                                                                     ; Button_Switch       ; work         ;
+;    |Button_Switch:button3|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |RegistroCargaTop|Button_Switch:button3                                                                                                     ; Button_Switch       ; work         ;
+;    |Button_Switch:button4|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |RegistroCargaTop|Button_Switch:button4                                                                                                     ; Button_Switch       ; work         ;
+;    |DisplayHex:display2|                     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RegistroCargaTop|DisplayHex:display2                                                                                                       ; DisplayHex          ; work         ;
+;    |Mux:mux_|                                ; 22 (22)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RegistroCargaTop|Mux:mux_                                                                                                                  ; Mux                 ; work         ;
+;    |RegistroCargaInput:regCargaIn|           ; 0 (0)               ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |RegistroCargaTop|RegistroCargaInput:regCargaIn                                                                                             ; RegistroCargaInput  ; work         ;
+;    |RegistroCargaOutput:regCargaOut|         ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |RegistroCargaTop|RegistroCargaOutput:regCargaOut                                                                                           ; RegistroCargaOutput ; work         ;
+;    |flag_detector:flag_dec|                  ; 9 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RegistroCargaTop|flag_detector:flag_dec                                                                                                    ; flag_detector       ; work         ;
+;       |Overflow:overflow|                    ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RegistroCargaTop|flag_detector:flag_dec|Overflow:overflow                                                                                  ; Overflow            ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary  ;
++---------------------------------+-------------+
+; Statistic                       ; Number Used ;
++---------------------------------+-------------+
+; Independent 9x9                 ; 1           ;
+; Total number of DSP blocks      ; 1           ;
+;                                 ;             ;
+; Fixed Point Unsigned Multiplier ; 1           ;
++---------------------------------+-------------+
 
 
 +------------------------------------------------------+
@@ -258,14 +301,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 6     ;
+; Total registers                              ; 24    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 2     ;
+; Number of registers using Asynchronous Clear ; 20    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |RegistroCargaTop|Mux:mux_|Mux4 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
 
 
 +----------------------------------------------------------------------------------+
@@ -428,22 +480,94 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ALU:alu_|Division:divisor|lpm_divide:Div0 ;
++------------------------+----------------+--------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                             ;
++------------------------+----------------+--------------------------------------------------+
+; LPM_WIDTHN             ; 4              ; Untyped                                          ;
+; LPM_WIDTHD             ; 4              ; Untyped                                          ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                          ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                          ;
+; LPM_PIPELINE           ; 0              ; Untyped                                          ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                          ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                          ;
+; CBXI_PARAMETER         ; lpm_divide_1am ; Untyped                                          ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                          ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                          ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                     ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                   ;
++------------------------+----------------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ALU:alu_|Modulo:modulador|lpm_divide:Mod0 ;
++------------------------+----------------+--------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                             ;
++------------------------+----------------+--------------------------------------------------+
+; LPM_WIDTHN             ; 4              ; Untyped                                          ;
+; LPM_WIDTHD             ; 4              ; Untyped                                          ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                          ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                          ;
+; LPM_PIPELINE           ; 0              ; Untyped                                          ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                          ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                          ;
+; CBXI_PARAMETER         ; lpm_divide_42m ; Untyped                                          ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                          ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                          ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                     ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                   ;
++------------------------+----------------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegistroCargaOutput:regCargaOut"                                                    ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; s[4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 6                           ;
-;     CLR               ; 2                           ;
+; arriav_ff             ; 24                          ;
+;     CLR               ; 20                          ;
 ;     plain             ; 4                           ;
-; arriav_lcell_comb     ; 6                           ;
-;     normal            ; 6                           ;
-;         0 data inputs ; 2                           ;
+; arriav_lcell_comb     ; 95                          ;
+;     arith             ; 18                          ;
+;         0 data inputs ; 4                           ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 4                           ;
+;         5 data inputs ; 6                           ;
+;     extend            ; 5                           ;
+;         7 data inputs ; 5                           ;
+;     normal            ; 54                          ;
 ;         1 data inputs ; 4                           ;
-; boundary_port         ; 34                          ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 8                           ;
+;         4 data inputs ; 18                          ;
+;         5 data inputs ; 6                           ;
+;         6 data inputs ; 11                          ;
+;     shared            ; 18                          ;
+;         0 data inputs ; 6                           ;
+;         2 data inputs ; 6                           ;
+;         4 data inputs ; 6                           ;
+; arriav_mac            ; 1                           ;
+; boundary_port         ; 29                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.42                        ;
+; Max LUT depth         ; 11.50                       ;
+; Average LUT depth     ; 6.54                        ;
 +-----------------------+-----------------------------+
 
 
@@ -452,7 +576,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -462,7 +586,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Sep 05 19:06:43 2022
+    Info: Processing started: Mon Sep 05 19:41:29 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Problema_2 -c Problema_2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -516,7 +640,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file registr
 Info (12127): Elaborating entity "RegistroCargaTop" for the top level hierarchy
 Info (12128): Elaborating entity "Button_Switch" for hierarchy "Button_Switch:button1" File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTop.sv Line: 15
 Info (12128): Elaborating entity "RegistroCargaInput" for hierarchy "RegistroCargaInput:regCargaIn" File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTop.sv Line: 21
-Warning (10230): Verilog HDL assignment warning at RegistroCargaInput.sv(7): truncated value with size 12 to match size of target (1) File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaInput.sv Line: 7
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu_" File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTop.sv Line: 30
 Info (12128): Elaborating entity "Suma" for hierarchy "ALU:alu_|Suma:sumador" File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/ALU.sv Line: 4
 Info (12128): Elaborating entity "Resta" for hierarchy "ALU:alu_|Resta:restador" File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/ALU.sv Line: 5
@@ -532,39 +655,42 @@ Info (12128): Elaborating entity "Mux" for hierarchy "Mux:mux_" File: C:/Users/L
 Info (12128): Elaborating entity "flag_detector" for hierarchy "flag_detector:flag_dec" File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTop.sv Line: 32
 Info (12128): Elaborating entity "Overflow" for hierarchy "flag_detector:flag_dec|Overflow:overflow" File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/flag_detector.sv Line: 3
 Info (12128): Elaborating entity "RegistroCargaOutput" for hierarchy "RegistroCargaOutput:regCargaOut" File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTop.sv Line: 35
-Warning (10230): Verilog HDL assignment warning at RegistroCargaOuput.sv(8): truncated value with size 9 to match size of target (1) File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaOuput.sv Line: 8
 Info (12128): Elaborating entity "DisplayHex" for hierarchy "DisplayHex:display2" File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTop.sv Line: 39
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "outDisplay[1]" is stuck at GND File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTop.sv Line: 1
-    Warning (13410): Pin "outDisplay[2]" is stuck at GND File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTop.sv Line: 1
-    Warning (13410): Pin "outDisplay[6]" is stuck at VCC File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTop.sv Line: 1
-    Warning (13410): Pin "flags[0]" is stuck at GND File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTop.sv Line: 1
-    Warning (13410): Pin "flags[1]" is stuck at GND File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTop.sv Line: 1
-    Warning (13410): Pin "flags[2]" is stuck at GND File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTop.sv Line: 1
-    Warning (13410): Pin "flags[3]" is stuck at GND File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTop.sv Line: 1
-    Warning (13410): Pin "salida[1]" is stuck at GND File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTop.sv Line: 1
-    Warning (13410): Pin "salida[2]" is stuck at GND File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTop.sv Line: 1
-    Warning (13410): Pin "salida[3]" is stuck at GND File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTop.sv Line: 1
-    Warning (13410): Pin "salida[4]" is stuck at GND File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTop.sv Line: 1
+Info (278001): Inferred 2 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ALU:alu_|Division:divisor|Div0" File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Division.sv Line: 2
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ALU:alu_|Modulo:modulador|Mod0" File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Modulo.sv Line: 2
+Info (12130): Elaborated megafunction instantiation "ALU:alu_|Division:divisor|lpm_divide:Div0" File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Division.sv Line: 2
+Info (12133): Instantiated megafunction "ALU:alu_|Division:divisor|lpm_divide:Div0" with the following parameter: File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Division.sv Line: 2
+    Info (12134): Parameter "LPM_WIDTHN" = "4"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_1am.tdf
+    Info (12023): Found entity 1: lpm_divide_1am File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/db/lpm_divide_1am.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_7kh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_7kh File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/db/sign_div_unsign_7kh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kse.tdf
+    Info (12023): Found entity 1: alt_u_div_kse File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/db/alt_u_div_kse.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "ALU:alu_|Modulo:modulador|lpm_divide:Mod0" File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Modulo.sv Line: 2
+Info (12133): Instantiated megafunction "ALU:alu_|Modulo:modulador|lpm_divide:Mod0" with the following parameter: File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Modulo.sv Line: 2
+    Info (12134): Parameter "LPM_WIDTHN" = "4"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_42m.tdf
+    Info (12023): Found entity 1: lpm_divide_42m File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/db/lpm_divide_42m.tdf Line: 25
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 7 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "a[1]" File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTop.sv Line: 1
-    Warning (15610): No output dependent on input pin "a[2]" File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTop.sv Line: 1
-    Warning (15610): No output dependent on input pin "a[3]" File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTop.sv Line: 1
-    Warning (15610): No output dependent on input pin "b[0]" File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTop.sv Line: 1
-    Warning (15610): No output dependent on input pin "b[1]" File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTop.sv Line: 1
-    Warning (15610): No output dependent on input pin "b[2]" File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTop.sv Line: 1
-    Warning (15610): No output dependent on input pin "b[3]" File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTop.sv Line: 1
-Info (21057): Implemented 40 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 140 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 14 input pins
-    Info (21059): Implemented 20 output pins
-    Info (21061): Implemented 6 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 24 warnings
-    Info: Peak virtual memory: 4824 megabytes
-    Info: Processing ended: Mon Sep 05 19:07:00 2022
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:46
+    Info (21059): Implemented 15 output pins
+    Info (21061): Implemented 110 logic cells
+    Info (21062): Implemented 1 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4830 megabytes
+    Info: Processing ended: Mon Sep 05 19:41:41 2022
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:30
 
 

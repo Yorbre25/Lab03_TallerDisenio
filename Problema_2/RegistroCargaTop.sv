@@ -1,5 +1,5 @@
 module RegistroCargaTop #(parameter N=4) (input[N-1:0] a, b, input [3:0] seleccion, input clk, rst, output[6:0] outDisplay, output [3:0] flags, output [3:0] seleccion_aux);
-
+	
 	logic [2*N+3:0] sRegInput;
 	logic [N+4:0] sRegOutput;
 	logic [N:0] salidaALU;
@@ -7,7 +7,7 @@ module RegistroCargaTop #(parameter N=4) (input[N-1:0] a, b, input [3:0] selecci
 	logic [N-1:0] a_aux;
 	logic [N-1:0] b_aux;
 	logic [3:0] selec_aux;
-	//logic [N:0] salida; 
+	logic [N:0] salida;
    //resultados
 	logic [N:0] rSum, rRest, rMod, rMult, rDiv, rAnd, rOr, rXor, rLShift, rRShift;
 	

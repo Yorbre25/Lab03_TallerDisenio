@@ -28,11 +28,6 @@ seleccion_aux[0] << seleccion_aux[0].DB_MAX_OUTPUT_PORT_TYPE
 seleccion_aux[1] << seleccion_aux[1].DB_MAX_OUTPUT_PORT_TYPE
 seleccion_aux[2] << seleccion_aux[2].DB_MAX_OUTPUT_PORT_TYPE
 seleccion_aux[3] << seleccion_aux[3].DB_MAX_OUTPUT_PORT_TYPE
-salida[0] << salida[0].DB_MAX_OUTPUT_PORT_TYPE
-salida[1] << salida[1].DB_MAX_OUTPUT_PORT_TYPE
-salida[2] << salida[2].DB_MAX_OUTPUT_PORT_TYPE
-salida[3] << salida[3].DB_MAX_OUTPUT_PORT_TYPE
-salida[4] << RegistroCargaOutput:regCargaOut.port4
 
 
 |RegistroCargaTop|Button_Switch:button1
@@ -56,32 +51,54 @@ s <= sAux.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |RegistroCargaTop|RegistroCargaInput:regCargaIn
-a[0] => saux.DATAIN
-a[1] => ~NO_FANOUT~
-a[2] => ~NO_FANOUT~
-a[3] => ~NO_FANOUT~
-b[0] => ~NO_FANOUT~
-b[1] => ~NO_FANOUT~
-b[2] => ~NO_FANOUT~
-b[3] => ~NO_FANOUT~
-seleccion[0] => ~NO_FANOUT~
-seleccion[1] => ~NO_FANOUT~
-seleccion[2] => ~NO_FANOUT~
-seleccion[3] => ~NO_FANOUT~
-clk => saux.CLK
-rst => saux.ACLR
-s[0] <= saux.DB_MAX_OUTPUT_PORT_TYPE
-s[1] <= <GND>
-s[2] <= <GND>
-s[3] <= <GND>
-s[4] <= <GND>
-s[5] <= <GND>
-s[6] <= <GND>
-s[7] <= <GND>
-s[8] <= <GND>
-s[9] <= <GND>
-s[10] <= <GND>
-s[11] <= <GND>
+a[0] => saux[0].DATAIN
+a[1] => saux[1].DATAIN
+a[2] => saux[2].DATAIN
+a[3] => saux[3].DATAIN
+b[0] => saux[4].DATAIN
+b[1] => saux[5].DATAIN
+b[2] => saux[6].DATAIN
+b[3] => saux[7].DATAIN
+seleccion[0] => saux[8].DATAIN
+seleccion[1] => saux[9].DATAIN
+seleccion[2] => saux[10].DATAIN
+seleccion[3] => saux[11].DATAIN
+clk => saux[0].CLK
+clk => saux[1].CLK
+clk => saux[2].CLK
+clk => saux[3].CLK
+clk => saux[4].CLK
+clk => saux[5].CLK
+clk => saux[6].CLK
+clk => saux[7].CLK
+clk => saux[8].CLK
+clk => saux[9].CLK
+clk => saux[10].CLK
+clk => saux[11].CLK
+rst => saux[0].ACLR
+rst => saux[1].ACLR
+rst => saux[2].ACLR
+rst => saux[3].ACLR
+rst => saux[4].ACLR
+rst => saux[5].ACLR
+rst => saux[6].ACLR
+rst => saux[7].ACLR
+rst => saux[8].ACLR
+rst => saux[9].ACLR
+rst => saux[10].ACLR
+rst => saux[11].ACLR
+s[0] <= saux[0].DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= saux[1].DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= saux[2].DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= saux[3].DB_MAX_OUTPUT_PORT_TYPE
+s[4] <= saux[4].DB_MAX_OUTPUT_PORT_TYPE
+s[5] <= saux[5].DB_MAX_OUTPUT_PORT_TYPE
+s[6] <= saux[6].DB_MAX_OUTPUT_PORT_TYPE
+s[7] <= saux[7].DB_MAX_OUTPUT_PORT_TYPE
+s[8] <= saux[8].DB_MAX_OUTPUT_PORT_TYPE
+s[9] <= saux[9].DB_MAX_OUTPUT_PORT_TYPE
+s[10] <= saux[10].DB_MAX_OUTPUT_PORT_TYPE
+s[11] <= saux[11].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |RegistroCargaTop|ALU:alu_
@@ -428,26 +445,42 @@ overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |RegistroCargaTop|RegistroCargaOutput:regCargaOut
-resultado[0] => saux.DATAIN
-resultado[1] => ~NO_FANOUT~
-resultado[2] => ~NO_FANOUT~
-resultado[3] => ~NO_FANOUT~
-resultado[4] => ~NO_FANOUT~
-flags[0] => ~NO_FANOUT~
-flags[1] => ~NO_FANOUT~
-flags[2] => ~NO_FANOUT~
-flags[3] => ~NO_FANOUT~
-clk => saux.CLK
-rst => saux.ACLR
-s[0] <= saux.DB_MAX_OUTPUT_PORT_TYPE
-s[1] <= <GND>
-s[2] <= <GND>
-s[3] <= <GND>
-s[4] <= <GND>
-s[5] <= <GND>
-s[6] <= <GND>
-s[7] <= <GND>
-s[8] <= <GND>
+resultado[0] => saux[0].DATAIN
+resultado[1] => saux[1].DATAIN
+resultado[2] => saux[2].DATAIN
+resultado[3] => saux[3].DATAIN
+resultado[4] => saux[4].DATAIN
+flags[0] => saux[5].DATAIN
+flags[1] => saux[6].DATAIN
+flags[2] => saux[7].DATAIN
+flags[3] => saux[8].DATAIN
+clk => saux[0].CLK
+clk => saux[1].CLK
+clk => saux[2].CLK
+clk => saux[3].CLK
+clk => saux[4].CLK
+clk => saux[5].CLK
+clk => saux[6].CLK
+clk => saux[7].CLK
+clk => saux[8].CLK
+rst => saux[0].ACLR
+rst => saux[1].ACLR
+rst => saux[2].ACLR
+rst => saux[3].ACLR
+rst => saux[4].ACLR
+rst => saux[5].ACLR
+rst => saux[6].ACLR
+rst => saux[7].ACLR
+rst => saux[8].ACLR
+s[0] <= saux[0].DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= saux[1].DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= saux[2].DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= saux[3].DB_MAX_OUTPUT_PORT_TYPE
+s[4] <= saux[4].DB_MAX_OUTPUT_PORT_TYPE
+s[5] <= saux[5].DB_MAX_OUTPUT_PORT_TYPE
+s[6] <= saux[6].DB_MAX_OUTPUT_PORT_TYPE
+s[7] <= saux[7].DB_MAX_OUTPUT_PORT_TYPE
+s[8] <= saux[8].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |RegistroCargaTop|DisplayHex:display2
