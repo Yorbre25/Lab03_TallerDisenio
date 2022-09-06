@@ -1,0 +1,5 @@
+module RegistroCargaInput #(parameter N=2)(input [N-1:0] a, b, input [3:0] seleccion, input clk, rst, output [2N+3:0] s);
+
+
+
+endmodule 

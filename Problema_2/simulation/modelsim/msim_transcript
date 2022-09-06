@@ -1,0 +1,270 @@
+# Reading pref.tcl
+# do Problema_2_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying D:/Programas/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2 {C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/XorN.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:02:56 on Sep 05,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2" C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/XorN.sv 
+# -- Compiling module XorN
+# 
+# Top level modules:
+# 	XorN
+# End time: 19:02:57 on Sep 05,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2 {C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Suma.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:02:57 on Sep 05,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2" C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Suma.sv 
+# -- Compiling module Suma
+# 
+# Top level modules:
+# 	Suma
+# End time: 19:02:57 on Sep 05,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2 {C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RightShift.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:02:57 on Sep 05,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2" C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RightShift.sv 
+# -- Compiling module RightShift
+# 
+# Top level modules:
+# 	RightShift
+# End time: 19:02:58 on Sep 05,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2 {C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Resta.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:02:58 on Sep 05,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2" C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Resta.sv 
+# -- Compiling module Resta
+# 
+# Top level modules:
+# 	Resta
+# End time: 19:02:58 on Sep 05,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2 {C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Overflow.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:03:01 on Sep 05,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2" C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Overflow.sv 
+# -- Compiling module Overflow
+# 
+# Top level modules:
+# 	Overflow
+# End time: 19:03:01 on Sep 05,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2 {C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/OrN.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:03:01 on Sep 05,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2" C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/OrN.sv 
+# -- Compiling module OrN
+# 
+# Top level modules:
+# 	OrN
+# End time: 19:03:01 on Sep 05,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2 {C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Mux.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:03:01 on Sep 05,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2" C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Mux.sv 
+# -- Compiling module Mux
+# 
+# Top level modules:
+# 	Mux
+# End time: 19:03:02 on Sep 05,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2 {C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Multiplicacion.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:03:02 on Sep 05,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2" C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Multiplicacion.sv 
+# -- Compiling module Multiplicacion
+# 
+# Top level modules:
+# 	Multiplicacion
+# End time: 19:03:02 on Sep 05,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2 {C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Modulo.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:03:02 on Sep 05,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2" C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Modulo.sv 
+# -- Compiling module Modulo
+# 
+# Top level modules:
+# 	Modulo
+# End time: 19:03:03 on Sep 05,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2 {C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/LeftShift.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:03:03 on Sep 05,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2" C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/LeftShift.sv 
+# -- Compiling module LeftShift
+# 
+# Top level modules:
+# 	LeftShift
+# End time: 19:03:03 on Sep 05,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2 {C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/flag_detector.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:03:03 on Sep 05,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2" C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/flag_detector.sv 
+# -- Compiling module flag_detector
+# 
+# Top level modules:
+# 	flag_detector
+# End time: 19:03:03 on Sep 05,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2 {C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Division.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:03:03 on Sep 05,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2" C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Division.sv 
+# -- Compiling module Division
+# 
+# Top level modules:
+# 	Division
+# End time: 19:03:04 on Sep 05,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2 {C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/DisplayHex.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:03:04 on Sep 05,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2" C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/DisplayHex.sv 
+# -- Compiling module DisplayHex
+# 
+# Top level modules:
+# 	DisplayHex
+# End time: 19:03:04 on Sep 05,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2 {C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Button_Switch.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:03:04 on Sep 05,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2" C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Button_Switch.sv 
+# -- Compiling module Button_Switch
+# 
+# Top level modules:
+# 	Button_Switch
+# End time: 19:03:04 on Sep 05,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2 {C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/AndN.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:03:05 on Sep 05,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2" C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/AndN.sv 
+# -- Compiling module AndN
+# 
+# Top level modules:
+# 	AndN
+# End time: 19:03:05 on Sep 05,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2 {C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/ALU.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:03:05 on Sep 05,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2" C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/ALU.sv 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 19:03:05 on Sep 05,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2 {C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaInput.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:03:05 on Sep 05,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2" C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaInput.sv 
+# -- Compiling module RegistroCargaInput
+# 
+# Top level modules:
+# 	RegistroCargaInput
+# End time: 19:03:06 on Sep 05,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2 {C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaOuput.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:03:06 on Sep 05,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2" C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaOuput.sv 
+# -- Compiling module RegistroCargaOutput
+# 
+# Top level modules:
+# 	RegistroCargaOutput
+# End time: 19:03:06 on Sep 05,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2 {C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTop.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:03:06 on Sep 05,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2" C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTop.sv 
+# -- Compiling module RegistroCargaTop
+# 
+# Top level modules:
+# 	RegistroCargaTop
+# End time: 19:03:06 on Sep 05,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2 {C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTest.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:03:07 on Sep 05,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2" C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTest.sv 
+# -- Compiling module RegistroCargaTest
+# 
+# Top level modules:
+# 	RegistroCargaTest
+# End time: 19:03:07 on Sep 05,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  testBranch
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" testBranch 
+# Start time: 19:03:08 on Sep 05,2022
+# ** Error: (vsim-3170) Could not find 'testBranch'.
+#         Searched libraries:
+#             D:/Programas/intelFPGA/20.1/modelsim_ase/altera/verilog/altera
+#             D:/Programas/intelFPGA/20.1/modelsim_ase/altera/verilog/220model
+#             D:/Programas/intelFPGA/20.1/modelsim_ase/altera/verilog/sgate
+#             D:/Programas/intelFPGA/20.1/modelsim_ase/altera/verilog/altera_mf
+#             D:/Programas/intelFPGA/20.1/modelsim_ase/altera/verilog/altera_lnsim
+#             D:/Programas/intelFPGA/20.1/modelsim_ase/altera/verilog/cyclonev
+#             D:/Programas/intelFPGA/20.1/modelsim_ase/altera/verilog/cyclonev_hssi
+#             D:/Programas/intelFPGA/20.1/modelsim_ase/altera/verilog/cyclonev_pcie_hip
+#             C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/simulation/modelsim/rtl_work
+#             C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/simulation/modelsim/rtl_work
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./Problema_2_run_msim_rtl_verilog.do PAUSED at line 30
+vsim work.RegistroCargaTest
+# vsim work.RegistroCargaTest 
+# Start time: 19:03:08 on Sep 05,2022
+# Loading sv_std.std
+# Loading work.RegistroCargaTest
+# Loading work.RegistroCargaTop
+# Loading work.Button_Switch
+# Loading work.RegistroCargaInput
+# Loading work.ALU
+# Loading work.Suma
+# Loading work.Resta
+# Loading work.Modulo
+# Loading work.Multiplicacion
+# Loading work.Division
+# Loading work.AndN
+# Loading work.OrN
+# Loading work.XorN
+# Loading work.LeftShift
+# Loading work.RightShift
+# Loading work.Mux
+# Loading work.flag_detector
+# Loading work.Overflow
+# Loading work.RegistroCargaOutput
+# Loading work.DisplayHex
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (4) for port 'salida'. The port definition is at: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTop.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /RegistroCargaTest/rCargaTop File: C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTest.sv Line: 6
+add wave -position end  sim:/RegistroCargaTest/seleccion_aux
+add wave -position end  sim:/RegistroCargaTest/outDisplay1
+add wave -position end  sim:/RegistroCargaTest/flags
+add wave -position end  sim:/RegistroCargaTest/clk
+add wave -position end  sim:/RegistroCargaTest/b
+add wave -position end  sim:/RegistroCargaTest/a
+# Can't move the Now cursor.
+# Can't move the Now cursor.
+run -all
+# End time: 19:04:21 on Sep 05,2022, Elapsed time: 0:01:13
+# Errors: 1, Warnings: 1

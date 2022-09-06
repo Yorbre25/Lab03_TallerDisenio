@@ -1,0 +1,12 @@
+module RegistroCargaOutput#(parameter N)(input [N:0] salida, input [3:0] flags, input clk, rst, output [N+4:0] s);
+	
+	logic saux = 0;
+	always @ (negedge clk or posedge rst)
+		if(rst)
+			saux=0;
+		else
+			saux = {salida, flags};
+ 
+	assign s = saux;
+
+endmodule 

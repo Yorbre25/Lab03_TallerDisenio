@@ -1,0 +1,550 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/simulation/modelsim
+vALU
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1662426185
+!i10b 1
+!s100 o]e7UXX^BB_VCMID3CZR71
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I389Gi:][UEn2TaTBWAY673
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1662245727
+8C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/ALU.sv
+FC:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/ALU.sv
+!i122 15
+L0 1 27
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1662426185.000000
+!s107 C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/ALU.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2|C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/ALU.sv|
+!i113 1
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2
+Z9 tCvgOpt 0
+n@a@l@u
+vAndN
+R1
+R2
+!i10b 1
+!s100 ^edkLDoL?6?>6>9`BO5J]1
+R3
+IQTHOgbF^>Zcg0lU7nd;cO3
+R4
+S1
+R0
+w1662246199
+8C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/AndN.sv
+FC:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/AndN.sv
+!i122 14
+Z10 L0 1 4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/AndN.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2|C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/AndN.sv|
+!i113 1
+R7
+R8
+R9
+n@and@n
+vButton_Switch
+R1
+Z11 !s110 1662426184
+!i10b 1
+!s100 3`gk4]lVA@knNA>l3?B1O0
+R3
+I?HGz:bfd@Q[n2TH;kTZ<m2
+R4
+S1
+R0
+Z12 w1662238627
+8C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Button_Switch.sv
+FC:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Button_Switch.sv
+!i122 13
+L0 1 14
+R5
+r1
+!s85 0
+31
+Z13 !s108 1662426184.000000
+!s107 C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Button_Switch.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2|C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Button_Switch.sv|
+!i113 1
+R7
+R8
+R9
+n@button_@switch
+vDisplayHex
+R1
+R11
+!i10b 1
+!s100 VK40D4l5CL8Ck_@]ALS?F2
+R3
+IXb@U131lJ;68FXhTWL33k0
+R4
+S1
+R0
+R12
+8C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/DisplayHex.sv
+FC:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/DisplayHex.sv
+!i122 12
+L0 2 10
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/DisplayHex.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2|C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/DisplayHex.sv|
+!i113 1
+R7
+R8
+R9
+n@display@hex
+vDivision
+R1
+R11
+!i10b 1
+!s100 l8^fKL?n[0`]PiJbLdnDe3
+R3
+IgY>hN^GQ8]K088;`P4Z1H3
+R4
+S1
+R0
+w1662245415
+8C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Division.sv
+FC:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Division.sv
+!i122 11
+Z14 L0 1 3
+R5
+r1
+!s85 0
+31
+Z15 !s108 1662426183.000000
+!s107 C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Division.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2|C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Division.sv|
+!i113 1
+R7
+R8
+R9
+n@division
+vflag_detector
+R1
+Z16 !s110 1662426183
+!i10b 1
+!s100 XI0=Fh=52zL4WE7F=fAEE1
+R3
+IF[g3OcJU5NOlTOXQ0K3hO3
+R4
+S1
+R0
+w1662250656
+8C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/flag_detector.sv
+FC:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/flag_detector.sv
+!i122 10
+Z17 L0 1 42
+R5
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/flag_detector.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2|C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/flag_detector.sv|
+!i113 1
+R7
+R8
+R9
+vLeftShift
+R1
+R16
+!i10b 1
+!s100 Wc^i9J]O8j[jKUDlRXio@0
+R3
+I4_7]A?RBeTD4BJLcd`JBQ2
+R4
+S1
+R0
+w1662246269
+8C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/LeftShift.sv
+FC:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/LeftShift.sv
+!i122 9
+R14
+R5
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/LeftShift.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2|C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/LeftShift.sv|
+!i113 1
+R7
+R8
+R9
+n@left@shift
+vModulo
+R1
+R16
+!i10b 1
+!s100 09CEGRBY0;jkVVhHE[N482
+R3
+IVF`>1H3Y[SNbXFZYF64e?3
+R4
+S1
+R0
+w1662245399
+8C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Modulo.sv
+FC:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Modulo.sv
+!i122 8
+R14
+R5
+r1
+!s85 0
+31
+Z18 !s108 1662426182.000000
+!s107 C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Modulo.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2|C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Modulo.sv|
+!i113 1
+R7
+R8
+R9
+n@modulo
+vMultiplicacion
+R1
+Z19 !s110 1662426182
+!i10b 1
+!s100 2>TbjfokGS:Y[`779ilB50
+R3
+IL5ZIm[1T]g8l6cWMZfX533
+R4
+S1
+R0
+w1662245407
+8C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Multiplicacion.sv
+FC:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Multiplicacion.sv
+!i122 7
+R14
+R5
+r1
+!s85 0
+31
+R18
+!s107 C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Multiplicacion.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2|C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Multiplicacion.sv|
+!i113 1
+R7
+R8
+R9
+n@multiplicacion
+vMux
+R1
+R19
+!i10b 1
+!s100 EDU3<GQo3eAbkEIaN<Ic22
+R3
+I?7NYGGc0[9z]K24nmHQ3>1
+R4
+S1
+R0
+w1662245743
+8C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Mux.sv
+FC:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Mux.sv
+!i122 6
+L0 3 22
+R5
+r1
+!s85 0
+31
+Z20 !s108 1662426181.000000
+!s107 C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Mux.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2|C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Mux.sv|
+!i113 1
+R7
+R8
+R9
+n@mux
+vOrN
+R1
+Z21 !s110 1662426181
+!i10b 1
+!s100 z[DTP6d7<<eeT2?UEFYi_3
+R3
+I?Ao:6P>C0RZ_L=MM@T>XT1
+R4
+S1
+R0
+w1662246141
+8C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/OrN.sv
+FC:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/OrN.sv
+!i122 5
+R10
+R5
+r1
+!s85 0
+31
+R20
+!s107 C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/OrN.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2|C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/OrN.sv|
+!i113 1
+R7
+R8
+R9
+n@or@n
+vOverflow
+R1
+R21
+!i10b 1
+!s100 gkd1B40cFV55YG?BCZ_XZ0
+R3
+I^4^I@zZ=jVgBM2LmIz7MN0
+R4
+S1
+R0
+w1662249424
+8C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Overflow.sv
+FC:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Overflow.sv
+!i122 4
+L0 1 9
+R5
+r1
+!s85 0
+31
+R20
+!s107 C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Overflow.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2|C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Overflow.sv|
+!i113 1
+R7
+R8
+R9
+n@overflow
+vRegistroCargaInput
+R1
+Z22 !s110 1662426186
+!i10b 1
+!s100 I>i`0oKFhKden76[H25dW0
+R3
+If4fC0<e<Bk_Kf3dCB:]dk1
+R4
+S1
+R0
+w1662426132
+8C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaInput.sv
+FC:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaInput.sv
+!i122 16
+L0 1 11
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaInput.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2|C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaInput.sv|
+!i113 1
+R7
+R8
+R9
+n@registro@carga@input
+vRegistroCargaOutput
+R1
+R22
+!i10b 1
+!s100 N[1lQKIRXWckATVYCH5ZB2
+R3
+IlD>m>J]A1b4d2U91UHlZ_2
+R4
+S1
+R0
+w1662426138
+8C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaOuput.sv
+FC:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaOuput.sv
+!i122 17
+L0 1 12
+R5
+r1
+!s85 0
+31
+Z23 !s108 1662426186.000000
+!s107 C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaOuput.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2|C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaOuput.sv|
+!i113 1
+R7
+R8
+R9
+n@registro@carga@output
+vRegistroCargaTest
+R1
+!s110 1662426187
+!i10b 1
+!s100 a3ZHPH`jg[S<J0lzY:GaI2
+R3
+InhHEJP9dUgfmoWl?knMWV2
+R4
+S1
+R0
+w1662425778
+8C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTest.sv
+FC:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTest.sv
+!i122 19
+L0 1 24
+R5
+r1
+!s85 0
+31
+!s108 1662426187.000000
+!s107 C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTest.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2|C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTest.sv|
+!i113 1
+R7
+R8
+R9
+n@registro@carga@test
+vRegistroCargaTop
+R1
+R22
+!i10b 1
+!s100 NHBzRVSk9BSVkHZcF;l702
+R3
+I8>H;>Y17A@FT1VL8AoSGU3
+R4
+S1
+R0
+w1662425760
+8C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTop.sv
+FC:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTop.sv
+!i122 18
+R17
+R5
+r1
+!s85 0
+31
+R23
+!s107 C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTop.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2|C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RegistroCargaTop.sv|
+!i113 1
+R7
+R8
+R9
+n@registro@carga@top
+vResta
+R1
+Z24 !s110 1662426178
+!i10b 1
+!s100 zQc<9JcJFiTYiz^nTXTjh0
+R3
+ImI4_RC66Snj`:7@eQBALK0
+R4
+S1
+R0
+w1662245386
+8C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Resta.sv
+FC:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Resta.sv
+!i122 3
+R14
+R5
+r1
+!s85 0
+31
+!s108 1662426178.000000
+!s107 C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Resta.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2|C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Resta.sv|
+!i113 1
+R7
+R8
+R9
+n@resta
+vRightShift
+R1
+R24
+!i10b 1
+!s100 @J6<I@dgYYVNeAz@oJ0_o3
+R3
+IzJf_Ez>Tl1O9D8KA6G[ND2
+R4
+S1
+R0
+w1662246268
+8C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RightShift.sv
+FC:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RightShift.sv
+!i122 2
+R14
+R5
+r1
+!s85 0
+31
+Z25 !s108 1662426177.000000
+!s107 C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RightShift.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2|C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/RightShift.sv|
+!i113 1
+R7
+R8
+R9
+n@right@shift
+vSuma
+R1
+Z26 !s110 1662426177
+!i10b 1
+!s100 IUJQGjkbKnHMOLf:O8bE_1
+R3
+Ib]76aCk2ZmRCTP[BYAkZU1
+R4
+S1
+R0
+w1662245384
+8C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Suma.sv
+FC:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Suma.sv
+!i122 1
+R14
+R5
+r1
+!s85 0
+31
+R25
+!s107 C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Suma.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2|C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/Suma.sv|
+!i113 1
+R7
+R8
+R9
+n@suma
+vXorN
+R1
+R26
+!i10b 1
+!s100 T8G3N5jOca@=ASE;:_0Y81
+R3
+IniF3W]N]7jZ3>>A4zMfJ<2
+R4
+S1
+R0
+w1662246203
+8C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/XorN.sv
+FC:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/XorN.sv
+!i122 0
+R10
+R5
+r1
+!s85 0
+31
+!s108 1662426176.000000
+!s107 C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/XorN.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2|C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/XorN.sv|
+!i113 1
+R7
+R8
+R9
+n@xor@n
