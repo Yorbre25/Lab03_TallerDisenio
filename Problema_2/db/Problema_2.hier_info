@@ -399,16 +399,33 @@ seleccion[2] => seleccion[2].IN1
 seleccion[3] => seleccion[3].IN1
 a0 => a0.IN1
 b0 => b0.IN1
+salida[0] => saux.DATAA
+salida[0] => saux.DATAA
 salida[0] => Equal0.IN31
+salida[0] => Add0.IN10
+salida[1] => saux.DATAA
+salida[1] => saux.DATAA
 salida[1] => Equal0.IN30
+salida[1] => Add0.IN9
+salida[2] => saux.DATAA
+salida[2] => saux.DATAA
 salida[2] => Equal0.IN29
+salida[2] => Add0.IN8
 salida[3] => salida[3].IN1
 salida[4] => flag1.DATAB
+salida[4] => saux.DATAA
+salida[4] => saux.DATAA
 salida[4] => Equal0.IN27
+salida[4] => Add0.IN7
 flags[0] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 flags[1] <= flag1.DB_MAX_OUTPUT_PORT_TYPE
 flags[2] <= flag2.DB_MAX_OUTPUT_PORT_TYPE
 flags[3] <= flag3.DB_MAX_OUTPUT_PORT_TYPE
+s[0] <= saux.DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= saux.DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= saux.DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= saux.DB_MAX_OUTPUT_PORT_TYPE
+s[4] <= saux.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |RegistroCargaTop|flag_detector:flag_dec|Overflow:overflow

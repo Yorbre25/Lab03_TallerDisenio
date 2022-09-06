@@ -1,5 +1,5 @@
 Fitter report for Problema_2
-Mon Sep 05 19:42:53 2022
+Tue Sep 06 10:33:28 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -65,15 +65,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Mon Sep 05 19:42:52 2022       ;
+; Fitter Status                   ; Successful - Tue Sep 06 10:33:28 2022       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; Problema_2                                  ;
 ; Top-level Entity Name           ; RegistroCargaTop                            ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 56 / 32,070 ( < 1 % )                       ;
-; Total registers                 ; 26                                          ;
+; Logic utilization (in ALMs)     ; 59 / 32,070 ( < 1 % )                       ;
+; Total registers                 ; 24                                          ;
 ; Total pins                      ; 29 / 457 ( 6 % )                            ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                       ;
@@ -153,44 +153,46 @@ https://fpgasoftware.intel.com/eula.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.02        ;
-; Maximum used               ; 4           ;
+; Average used               ; 1.03        ;
+; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.7%      ;
-;     Processor 3            ;   0.6%      ;
-;     Processor 4            ;   0.6%      ;
+;     Processor 2            ;   0.4%      ;
+;     Processor 3            ;   0.4%      ;
+;     Processor 4            ;   0.4%      ;
+;     Processor 5            ;   0.4%      ;
+;     Processor 6            ;   0.4%      ;
+;     Processor 7            ;   0.4%      ;
+;     Processor 8            ;   0.4%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Netlist Optimizations                                                                                                                                                                                                                                          ;
-+---------------------------------------+-----------------+---------------------------------------------------+----------------------------+-----------+----------------+----------------------------------------------------+------------------+-----------------------+
-; Node                                  ; Action          ; Operation                                         ; Reason                     ; Node Port ; Node Port Name ; Destination Node                                   ; Destination Port ; Destination Port Name ;
-+---------------------------------------+-----------------+---------------------------------------------------+----------------------------+-----------+----------------+----------------------------------------------------+------------------+-----------------------+
-; clk~inputCLKENA0                      ; Created         ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                    ;                  ;                       ;
-; RegistroCargaInput:regCargaIn|saux[0] ; Packed Register ; Register Packing                                  ; Timing optimization        ; Q         ;                ; ALU:alu_|Multiplicacion:multiplicador|S[0]         ; AX               ;                       ;
-; RegistroCargaInput:regCargaIn|saux[0] ; Duplicated      ; Register Packing                                  ; Timing optimization        ; Q         ;                ; RegistroCargaInput:regCargaIn|saux[0]~_Duplicate_1 ; Q                ;                       ;
-; RegistroCargaInput:regCargaIn|saux[1] ; Packed Register ; Register Packing                                  ; Timing optimization        ; Q         ;                ; ALU:alu_|Multiplicacion:multiplicador|S[0]         ; AX               ;                       ;
-; RegistroCargaInput:regCargaIn|saux[1] ; Duplicated      ; Register Packing                                  ; Timing optimization        ; Q         ;                ; RegistroCargaInput:regCargaIn|saux[1]~_Duplicate_1 ; Q                ;                       ;
-; RegistroCargaInput:regCargaIn|saux[2] ; Packed Register ; Register Packing                                  ; Timing optimization        ; Q         ;                ; ALU:alu_|Multiplicacion:multiplicador|S[0]         ; AX               ;                       ;
-; RegistroCargaInput:regCargaIn|saux[2] ; Duplicated      ; Register Packing                                  ; Timing optimization        ; Q         ;                ; RegistroCargaInput:regCargaIn|saux[2]~_Duplicate_1 ; Q                ;                       ;
-; RegistroCargaInput:regCargaIn|saux[3] ; Packed Register ; Register Packing                                  ; Timing optimization        ; Q         ;                ; ALU:alu_|Multiplicacion:multiplicador|S[0]         ; AX               ;                       ;
-; RegistroCargaInput:regCargaIn|saux[3] ; Duplicated      ; Register Packing                                  ; Timing optimization        ; Q         ;                ; RegistroCargaInput:regCargaIn|saux[3]~_Duplicate_1 ; Q                ;                       ;
-; RegistroCargaInput:regCargaIn|saux[4] ; Packed Register ; Register Packing                                  ; Timing optimization        ; Q         ;                ; ALU:alu_|Multiplicacion:multiplicador|S[0]         ; AY               ;                       ;
-; RegistroCargaInput:regCargaIn|saux[4] ; Duplicated      ; Register Packing                                  ; Timing optimization        ; Q         ;                ; RegistroCargaInput:regCargaIn|saux[4]~_Duplicate_1 ; Q                ;                       ;
-; RegistroCargaInput:regCargaIn|saux[5] ; Packed Register ; Register Packing                                  ; Timing optimization        ; Q         ;                ; ALU:alu_|Multiplicacion:multiplicador|S[0]         ; AY               ;                       ;
-; RegistroCargaInput:regCargaIn|saux[5] ; Duplicated      ; Register Packing                                  ; Timing optimization        ; Q         ;                ; RegistroCargaInput:regCargaIn|saux[5]~_Duplicate_1 ; Q                ;                       ;
-; RegistroCargaInput:regCargaIn|saux[6] ; Packed Register ; Register Packing                                  ; Timing optimization        ; Q         ;                ; ALU:alu_|Multiplicacion:multiplicador|S[0]         ; AY               ;                       ;
-; RegistroCargaInput:regCargaIn|saux[6] ; Duplicated      ; Register Packing                                  ; Timing optimization        ; Q         ;                ; RegistroCargaInput:regCargaIn|saux[6]~_Duplicate_1 ; Q                ;                       ;
-; RegistroCargaInput:regCargaIn|saux[7] ; Packed Register ; Register Packing                                  ; Timing optimization        ; Q         ;                ; ALU:alu_|Multiplicacion:multiplicador|S[0]         ; AY               ;                       ;
-; RegistroCargaInput:regCargaIn|saux[7] ; Duplicated      ; Register Packing                                  ; Timing optimization        ; Q         ;                ; RegistroCargaInput:regCargaIn|saux[7]~_Duplicate_1 ; Q                ;                       ;
-; Button_Switch:button3|sAux            ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Button_Switch:button3|sAux~DUPLICATE               ;                  ;                       ;
-; Button_Switch:button4|sAux            ; Duplicated      ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Button_Switch:button4|sAux~DUPLICATE               ;                  ;                       ;
-+---------------------------------------+-----------------+---------------------------------------------------+----------------------------+-----------+----------------+----------------------------------------------------+------------------+-----------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Netlist Optimizations                                                                                                                                                                                                         ;
++---------------------------------------+-----------------+------------------+----------------------------+-----------+----------------+----------------------------------------------------+------------------+-----------------------+
+; Node                                  ; Action          ; Operation        ; Reason                     ; Node Port ; Node Port Name ; Destination Node                                   ; Destination Port ; Destination Port Name ;
++---------------------------------------+-----------------+------------------+----------------------------+-----------+----------------+----------------------------------------------------+------------------+-----------------------+
+; clk~inputCLKENA0                      ; Created         ; Placement        ; Fitter Periphery Placement ;           ;                ;                                                    ;                  ;                       ;
+; RegistroCargaInput:regCargaIn|saux[0] ; Packed Register ; Register Packing ; Timing optimization        ; Q         ;                ; ALU:alu_|Multiplicacion:multiplicador|S[0]         ; AX               ;                       ;
+; RegistroCargaInput:regCargaIn|saux[0] ; Duplicated      ; Register Packing ; Timing optimization        ; Q         ;                ; RegistroCargaInput:regCargaIn|saux[0]~_Duplicate_1 ; Q                ;                       ;
+; RegistroCargaInput:regCargaIn|saux[1] ; Packed Register ; Register Packing ; Timing optimization        ; Q         ;                ; ALU:alu_|Multiplicacion:multiplicador|S[0]         ; AX               ;                       ;
+; RegistroCargaInput:regCargaIn|saux[1] ; Duplicated      ; Register Packing ; Timing optimization        ; Q         ;                ; RegistroCargaInput:regCargaIn|saux[1]~_Duplicate_1 ; Q                ;                       ;
+; RegistroCargaInput:regCargaIn|saux[2] ; Packed Register ; Register Packing ; Timing optimization        ; Q         ;                ; ALU:alu_|Multiplicacion:multiplicador|S[0]         ; AX               ;                       ;
+; RegistroCargaInput:regCargaIn|saux[2] ; Duplicated      ; Register Packing ; Timing optimization        ; Q         ;                ; RegistroCargaInput:regCargaIn|saux[2]~_Duplicate_1 ; Q                ;                       ;
+; RegistroCargaInput:regCargaIn|saux[3] ; Packed Register ; Register Packing ; Timing optimization        ; Q         ;                ; ALU:alu_|Multiplicacion:multiplicador|S[0]         ; AX               ;                       ;
+; RegistroCargaInput:regCargaIn|saux[3] ; Duplicated      ; Register Packing ; Timing optimization        ; Q         ;                ; RegistroCargaInput:regCargaIn|saux[3]~_Duplicate_1 ; Q                ;                       ;
+; RegistroCargaInput:regCargaIn|saux[4] ; Packed Register ; Register Packing ; Timing optimization        ; Q         ;                ; ALU:alu_|Multiplicacion:multiplicador|S[0]         ; AY               ;                       ;
+; RegistroCargaInput:regCargaIn|saux[4] ; Duplicated      ; Register Packing ; Timing optimization        ; Q         ;                ; RegistroCargaInput:regCargaIn|saux[4]~_Duplicate_1 ; Q                ;                       ;
+; RegistroCargaInput:regCargaIn|saux[5] ; Packed Register ; Register Packing ; Timing optimization        ; Q         ;                ; ALU:alu_|Multiplicacion:multiplicador|S[0]         ; AY               ;                       ;
+; RegistroCargaInput:regCargaIn|saux[5] ; Duplicated      ; Register Packing ; Timing optimization        ; Q         ;                ; RegistroCargaInput:regCargaIn|saux[5]~_Duplicate_1 ; Q                ;                       ;
+; RegistroCargaInput:regCargaIn|saux[6] ; Packed Register ; Register Packing ; Timing optimization        ; Q         ;                ; ALU:alu_|Multiplicacion:multiplicador|S[0]         ; AY               ;                       ;
+; RegistroCargaInput:regCargaIn|saux[6] ; Duplicated      ; Register Packing ; Timing optimization        ; Q         ;                ; RegistroCargaInput:regCargaIn|saux[6]~_Duplicate_1 ; Q                ;                       ;
+; RegistroCargaInput:regCargaIn|saux[7] ; Packed Register ; Register Packing ; Timing optimization        ; Q         ;                ; ALU:alu_|Multiplicacion:multiplicador|S[0]         ; AY               ;                       ;
+; RegistroCargaInput:regCargaIn|saux[7] ; Duplicated      ; Register Packing ; Timing optimization        ; Q         ;                ; RegistroCargaInput:regCargaIn|saux[7]~_Duplicate_1 ; Q                ;                       ;
++---------------------------------------+-----------------+------------------+----------------------------+-----------+----------------+----------------------------------------------------+------------------+-----------------------+
 
 
 +--------------------------------------------------------------------------------------------------+
@@ -199,8 +201,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 180 ) ; 0.00 % ( 0 / 180 )         ; 0.00 % ( 0 / 180 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 180 ) ; 0.00 % ( 0 / 180 )         ; 0.00 % ( 0 / 180 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 184 ) ; 0.00 % ( 0 / 184 )         ; 0.00 % ( 0 / 184 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 184 ) ; 0.00 % ( 0 / 184 )         ; 0.00 % ( 0 / 184 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -223,7 +225,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 180 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 184 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 0 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -231,7 +233,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/output_files/Problema_2.pin.
+The pin-out file can be found in C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Problema_2/output_files/Problema_2.pin.
 
 
 +------------------------------------------------------------------------------------------+
@@ -239,14 +241,14 @@ The pin-out file can be found in C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDi
 +-------------------------------------------------------------+--------------------+-------+
 ; Resource                                                    ; Usage              ; %     ;
 +-------------------------------------------------------------+--------------------+-------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 56 / 32,070        ; < 1 % ;
-; ALMs needed [=A-B+C]                                        ; 56                 ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 60 / 32,070        ; < 1 % ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 59 / 32,070        ; < 1 % ;
+; ALMs needed [=A-B+C]                                        ; 59                 ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 61 / 32,070        ; < 1 % ;
 ;         [a] ALMs used for LUT logic and registers           ; 8                  ;       ;
-;         [b] ALMs used for LUT logic                         ; 48                 ;       ;
+;         [b] ALMs used for LUT logic                         ; 49                 ;       ;
 ;         [c] ALMs used for registers                         ; 4                  ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 4 / 32,070         ; < 1 % ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 2 / 32,070         ; < 1 % ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32,070         ; 0 %   ;
 ;         [a] Due to location constrained logic               ; 0                  ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                  ;       ;
@@ -255,25 +257,25 @@ The pin-out file can be found in C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDi
 ;                                                             ;                    ;       ;
 ; Difficulty packing design                                   ; Low                ;       ;
 ;                                                             ;                    ;       ;
-; Total LABs:  partially or completely used                   ; 10 / 3,207         ; < 1 % ;
-;     -- Logic LABs                                           ; 10                 ;       ;
+; Total LABs:  partially or completely used                   ; 9 / 3,207          ; < 1 % ;
+;     -- Logic LABs                                           ; 9                  ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
-; Combinational ALUT usage for logic                          ; 96                 ;       ;
-;     -- 7 input functions                                    ; 5                  ;       ;
-;     -- 6 input functions                                    ; 11                 ;       ;
-;     -- 5 input functions                                    ; 12                 ;       ;
-;     -- 4 input functions                                    ; 24                 ;       ;
+; Combinational ALUT usage for logic                          ; 100                ;       ;
+;     -- 7 input functions                                    ; 6                  ;       ;
+;     -- 6 input functions                                    ; 12                 ;       ;
+;     -- 5 input functions                                    ; 13                 ;       ;
+;     -- 4 input functions                                    ; 25                 ;       ;
 ;     -- <=3 input functions                                  ; 44                 ;       ;
 ; Combinational ALUT usage for route-throughs                 ; 4                  ;       ;
 ;                                                             ;                    ;       ;
-; Dedicated logic registers                                   ; 26                 ;       ;
+; Dedicated logic registers                                   ; 24                 ;       ;
 ;     -- By type:                                             ;                    ;       ;
 ;         -- Primary logic registers                          ; 24 / 64,140        ; < 1 % ;
-;         -- Secondary logic registers                        ; 2 / 64,140         ; < 1 % ;
+;         -- Secondary logic registers                        ; 0 / 64,140         ; 0 %   ;
 ;     -- By function:                                         ;                    ;       ;
 ;         -- Design implementation registers                  ; 24                 ;       ;
-;         -- Routing optimization registers                   ; 2                  ;       ;
+;         -- Routing optimization registers                   ; 0                  ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
 ; I/O pins                                                    ; 29 / 457           ; 6 %   ;
@@ -328,12 +330,12 @@ The pin-out file can be found in C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDi
 ; Oscillator blocks                                           ; 0 / 1              ; 0 %   ;
 ; Impedance control blocks                                    ; 0 / 4              ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
-; Average interconnect usage (total/H/V)                      ; 0.1% / 0.1% / 0.1% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 1.4% / 1.7% / 0.6% ;       ;
+; Average interconnect usage (total/H/V)                      ; 0.1% / 0.1% / 0.0% ;       ;
+; Peak interconnect usage (total/H/V)                         ; 1.4% / 1.7% / 0.7% ;       ;
 ; Maximum fan-out                                             ; 22                 ;       ;
 ; Highest non-global fan-out                                  ; 22                 ;       ;
-; Total fan-out                                               ; 487                ;       ;
-; Average fan-out                                             ; 2.62               ;       ;
+; Total fan-out                                               ; 505                ;       ;
+; Average fan-out                                             ; 2.69               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -342,14 +344,14 @@ The pin-out file can be found in C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDi
 +-------------------------------------------------------------+----------------------+--------------------------------+
 ; Statistic                                                   ; Top                  ; hard_block:auto_generated_inst ;
 +-------------------------------------------------------------+----------------------+--------------------------------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 56 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
-; ALMs needed [=A-B+C]                                        ; 56                   ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 60 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 59 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
+; ALMs needed [=A-B+C]                                        ; 59                   ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 61 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
 ;         [a] ALMs used for LUT logic and registers           ; 8                    ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 48                   ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 49                   ; 0                              ;
 ;         [c] ALMs used for registers                         ; 4                    ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                    ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 4 / 32070 ( < 1 % )  ; 0 / 32070 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 2 / 32070 ( < 1 % )  ; 0 / 32070 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32070 ( 0 % )    ; 0 / 32070 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                    ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                    ; 0                              ;
@@ -358,15 +360,15 @@ The pin-out file can be found in C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDi
 ;                                                             ;                      ;                                ;
 ; Difficulty packing design                                   ; Low                  ; Low                            ;
 ;                                                             ;                      ;                                ;
-; Total LABs:  partially or completely used                   ; 10 / 3207 ( < 1 % )  ; 0 / 3207 ( 0 % )               ;
-;     -- Logic LABs                                           ; 10                   ; 0                              ;
+; Total LABs:  partially or completely used                   ; 9 / 3207 ( < 1 % )   ; 0 / 3207 ( 0 % )               ;
+;     -- Logic LABs                                           ; 9                    ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
-; Combinational ALUT usage for logic                          ; 96                   ; 0                              ;
-;     -- 7 input functions                                    ; 5                    ; 0                              ;
-;     -- 6 input functions                                    ; 11                   ; 0                              ;
-;     -- 5 input functions                                    ; 12                   ; 0                              ;
-;     -- 4 input functions                                    ; 24                   ; 0                              ;
+; Combinational ALUT usage for logic                          ; 100                  ; 0                              ;
+;     -- 7 input functions                                    ; 6                    ; 0                              ;
+;     -- 6 input functions                                    ; 12                   ; 0                              ;
+;     -- 5 input functions                                    ; 13                   ; 0                              ;
+;     -- 4 input functions                                    ; 25                   ; 0                              ;
 ;     -- <=3 input functions                                  ; 44                   ; 0                              ;
 ; Combinational ALUT usage for route-throughs                 ; 4                    ; 0                              ;
 ; Memory ALUT usage                                           ; 0                    ; 0                              ;
@@ -376,10 +378,10 @@ The pin-out file can be found in C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDi
 ; Dedicated logic registers                                   ; 0                    ; 0                              ;
 ;     -- By type:                                             ;                      ;                                ;
 ;         -- Primary logic registers                          ; 24 / 64140 ( < 1 % ) ; 0 / 64140 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 2 / 64140 ( < 1 % )  ; 0 / 64140 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 0 / 64140 ( 0 % )    ; 0 / 64140 ( 0 % )              ;
 ;     -- By function:                                         ;                      ;                                ;
 ;         -- Design implementation registers                  ; 24                   ; 0                              ;
-;         -- Routing optimization registers                   ; 2                    ; 0                              ;
+;         -- Routing optimization registers                   ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ;                                                             ;                      ;                                ;
 ; Virtual pins                                                ; 0                    ; 0                              ;
@@ -397,8 +399,8 @@ The pin-out file can be found in C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDi
 ;     -- Registered Output Connections                        ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Internal Connections                                        ;                      ;                                ;
-;     -- Total Connections                                    ; 499                  ; 0                              ;
-;     -- Registered Connections                               ; 205                  ; 0                              ;
+;     -- Total Connections                                    ; 517                  ; 0                              ;
+;     -- Registered Connections                               ; 210                  ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; External Connections                                        ;                      ;                                ;
 ;     -- Top                                                  ; 0                    ; 0                              ;
@@ -442,8 +444,8 @@ The pin-out file can be found in C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDi
 ; rst          ; AC12  ; 3A       ; 16           ; 0            ; 0            ; 21                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; seleccion[0] ; AA14  ; 3B       ; 36           ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; seleccion[1] ; AA15  ; 3B       ; 36           ; 0            ; 17           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; seleccion[2] ; W15   ; 3B       ; 40           ; 0            ; 0            ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; seleccion[3] ; Y16   ; 3B       ; 40           ; 0            ; 17           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; seleccion[2] ; W15   ; 3B       ; 40           ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; seleccion[3] ; Y16   ; 3B       ; 40           ; 0            ; 17           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 +--------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
 
@@ -455,7 +457,7 @@ The pin-out file can be found in C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDi
 ; flags[0]         ; Y19   ; 4A       ; 84           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; flags[1]         ; W20   ; 5A       ; 89           ; 6            ; 3            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; flags[2]         ; W21   ; 5A       ; 89           ; 8            ; 3            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
-; flags[3]         ; Y21   ; 5A       ; 89           ; 6            ; 20           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
+; flags[3]         ; AD27  ; 5A       ; 89           ; 8            ; 54           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; outDisplay[0]    ; AE26  ; 5A       ; 89           ; 8            ; 37           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; outDisplay[1]    ; AE27  ; 5A       ; 89           ; 11           ; 77           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; outDisplay[2]    ; AE28  ; 5A       ; 89           ; 11           ; 94           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
@@ -641,7 +643,7 @@ The pin-out file can be found in C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDi
 ; AD24     ; 211        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AD25     ; 213        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AD26     ; 240        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; AD27     ; 222        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; AD27     ; 222        ; 5A             ; flags[3]                        ; output ; 2.5 V        ;                     ; Row I/O      ; Y               ; no       ; Off          ;
 ; AD28     ;            ; 5A             ; VCCIO5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AD29     ; 255        ; 5B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AD30     ; 257        ; 5B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
@@ -1383,7 +1385,7 @@ The pin-out file can be found in C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDi
 ; Y18      ; 178        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; Y19      ; 202        ; 4A             ; flags[0]                        ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; Y20      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; Y21      ; 219        ; 5A             ; flags[3]                        ; output ; 2.5 V        ;                     ; Row I/O      ; Y               ; no       ; Off          ;
+; Y21      ; 219        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; Y22      ;            ; --             ; VCCA_FPLL                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; Y23      ; 232        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; Y24      ; 234        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
@@ -1439,31 +1441,31 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                   ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                         ; Entity Name         ; Library Name ;
 +----------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |RegistroCargaTop                            ; 56.0 (0.5)           ; 60.0 (0.5)                       ; 4.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 96 (1)              ; 26 (0)                    ; 0 (0)         ; 0                 ; 0     ; 1          ; 29   ; 0            ; |RegistroCargaTop                                                                                                                           ; RegistroCargaTop    ; work         ;
-;    |ALU:alu_|                                ; 23.5 (0.0)           ; 24.8 (0.0)                       ; 1.2 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 53 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 1          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_                                                                                                                  ; ALU                 ; work         ;
-;       |Division:divisor|                     ; 10.5 (0.0)           ; 11.5 (0.0)                       ; 1.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 23 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|Division:divisor                                                                                                 ; Division            ; work         ;
-;          |lpm_divide:Div0|                   ; 10.5 (0.0)           ; 11.5 (0.0)                       ; 1.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 23 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|Division:divisor|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
-;             |lpm_divide_1am:auto_generated|  ; 10.5 (0.0)           ; 11.5 (0.0)                       ; 1.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 23 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|Division:divisor|lpm_divide:Div0|lpm_divide_1am:auto_generated                                                   ; lpm_divide_1am      ; work         ;
-;                |sign_div_unsign_7kh:divider| ; 10.5 (0.0)           ; 11.5 (0.0)                       ; 1.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 23 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|Division:divisor|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh ; work         ;
-;                   |alt_u_div_kse:divider|    ; 10.5 (10.5)          ; 11.5 (11.5)                      ; 1.0 (1.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 23 (23)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|Division:divisor|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse       ; work         ;
-;       |Modulo:modulador|                     ; 9.3 (0.0)            ; 9.3 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 22 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|Modulo:modulador                                                                                                 ; Modulo              ; work         ;
-;          |lpm_divide:Mod0|                   ; 9.3 (0.0)            ; 9.3 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 22 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|Modulo:modulador|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
-;             |lpm_divide_42m:auto_generated|  ; 9.3 (0.0)            ; 9.3 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 22 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|Modulo:modulador|lpm_divide:Mod0|lpm_divide_42m:auto_generated                                                   ; lpm_divide_42m      ; work         ;
-;                |sign_div_unsign_7kh:divider| ; 9.3 (0.0)            ; 9.3 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 22 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|Modulo:modulador|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh ; work         ;
-;                   |alt_u_div_kse:divider|    ; 9.3 (9.3)            ; 9.3 (9.3)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 22 (22)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|Modulo:modulador|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse       ; work         ;
+; |RegistroCargaTop                            ; 59.0 (0.5)           ; 61.0 (0.5)                       ; 2.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 100 (1)             ; 24 (0)                    ; 0 (0)         ; 0                 ; 0     ; 1          ; 29   ; 0            ; |RegistroCargaTop                                                                                                                           ; RegistroCargaTop    ; work         ;
+;    |ALU:alu_|                                ; 23.2 (0.0)           ; 25.0 (0.0)                       ; 1.8 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 53 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 1          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_                                                                                                                  ; ALU                 ; work         ;
+;       |Division:divisor|                     ; 10.2 (0.0)           ; 11.5 (0.0)                       ; 1.3 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 23 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|Division:divisor                                                                                                 ; Division            ; work         ;
+;          |lpm_divide:Div0|                   ; 10.2 (0.0)           ; 11.5 (0.0)                       ; 1.3 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 23 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|Division:divisor|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;             |lpm_divide_1am:auto_generated|  ; 10.2 (0.0)           ; 11.5 (0.0)                       ; 1.3 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 23 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|Division:divisor|lpm_divide:Div0|lpm_divide_1am:auto_generated                                                   ; lpm_divide_1am      ; work         ;
+;                |sign_div_unsign_7kh:divider| ; 10.2 (0.0)           ; 11.5 (0.0)                       ; 1.3 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 23 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|Division:divisor|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh ; work         ;
+;                   |alt_u_div_kse:divider|    ; 10.2 (10.2)          ; 11.5 (11.5)                      ; 1.3 (1.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 23 (23)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|Division:divisor|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse       ; work         ;
+;       |Modulo:modulador|                     ; 9.5 (0.0)            ; 10.0 (0.0)                       ; 0.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 22 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|Modulo:modulador                                                                                                 ; Modulo              ; work         ;
+;          |lpm_divide:Mod0|                   ; 9.5 (0.0)            ; 10.0 (0.0)                       ; 0.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 22 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|Modulo:modulador|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;             |lpm_divide_42m:auto_generated|  ; 9.5 (0.0)            ; 10.0 (0.0)                       ; 0.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 22 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|Modulo:modulador|lpm_divide:Mod0|lpm_divide_42m:auto_generated                                                   ; lpm_divide_42m      ; work         ;
+;                |sign_div_unsign_7kh:divider| ; 9.5 (0.0)            ; 10.0 (0.0)                       ; 0.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 22 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|Modulo:modulador|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh ; work         ;
+;                   |alt_u_div_kse:divider|    ; 9.5 (9.5)            ; 10.0 (10.0)                      ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 22 (22)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|Modulo:modulador|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse       ; work         ;
 ;       |Multiplicacion:multiplicador|         ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 1          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|Multiplicacion:multiplicador                                                                                     ; Multiplicacion      ; work         ;
-;       |OrN:orer|                             ; 0.8 (0.8)            ; 1.0 (1.0)                        ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (2)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|OrN:orer                                                                                                         ; OrN                 ; work         ;
-;       |Resta:restador|                       ; 2.5 (2.5)            ; 3.0 (3.0)                        ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 6 (6)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|Resta:restador                                                                                                   ; Resta               ; work         ;
+;       |OrN:orer|                             ; 1.0 (1.0)            ; 1.0 (1.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (2)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|OrN:orer                                                                                                         ; OrN                 ; work         ;
+;       |Resta:restador|                       ; 2.5 (2.5)            ; 2.5 (2.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 6 (6)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|ALU:alu_|Resta:restador                                                                                                   ; Resta               ; work         ;
 ;    |Button_Switch:button1|                   ; 0.5 (0.5)            ; 1.0 (1.0)                        ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 1 (1)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|Button_Switch:button1                                                                                                     ; Button_Switch       ; work         ;
 ;    |Button_Switch:button2|                   ; 0.5 (0.5)            ; 1.0 (1.0)                        ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 1 (1)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|Button_Switch:button2                                                                                                     ; Button_Switch       ; work         ;
-;    |Button_Switch:button3|                   ; 0.5 (0.5)            ; 1.0 (1.0)                        ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 2 (2)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|Button_Switch:button3                                                                                                     ; Button_Switch       ; work         ;
-;    |Button_Switch:button4|                   ; 0.7 (0.7)            ; 1.0 (1.0)                        ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 2 (2)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|Button_Switch:button4                                                                                                     ; Button_Switch       ; work         ;
+;    |Button_Switch:button3|                   ; 0.5 (0.5)            ; 1.0 (1.0)                        ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 1 (1)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|Button_Switch:button3                                                                                                     ; Button_Switch       ; work         ;
+;    |Button_Switch:button4|                   ; 0.5 (0.5)            ; 1.0 (1.0)                        ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 1 (1)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|Button_Switch:button4                                                                                                     ; Button_Switch       ; work         ;
 ;    |DisplayHex:display2|                     ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|DisplayHex:display2                                                                                                       ; DisplayHex          ; work         ;
 ;    |Mux:mux_|                                ; 14.7 (14.7)          ; 14.7 (14.7)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 22 (22)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|Mux:mux_                                                                                                                  ; Mux                 ; work         ;
-;    |RegistroCargaInput:regCargaIn|           ; 3.7 (3.7)            ; 4.2 (4.2)                        ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 12 (12)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|RegistroCargaInput:regCargaIn                                                                                             ; RegistroCargaInput  ; work         ;
-;    |RegistroCargaOutput:regCargaOut|         ; 2.5 (2.5)            ; 2.7 (2.7)                        ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 8 (8)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|RegistroCargaOutput:regCargaOut                                                                                           ; RegistroCargaOutput ; work         ;
-;    |flag_detector:flag_dec|                  ; 5.4 (4.4)            ; 5.7 (4.7)                        ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 9 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|flag_detector:flag_dec                                                                                                    ; flag_detector       ; work         ;
-;       |Overflow:overflow|                    ; 1.0 (1.0)            ; 1.0 (1.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (2)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|flag_detector:flag_dec|Overflow:overflow                                                                                  ; Overflow            ; work         ;
+;    |RegistroCargaInput:regCargaIn|           ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 12 (12)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|RegistroCargaInput:regCargaIn                                                                                             ; RegistroCargaInput  ; work         ;
+;    |RegistroCargaOutput:regCargaOut|         ; 2.7 (2.7)            ; 2.7 (2.7)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 8 (8)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|RegistroCargaOutput:regCargaOut                                                                                           ; RegistroCargaOutput ; work         ;
+;    |flag_detector:flag_dec|                  ; 7.2 (6.5)            ; 7.2 (6.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 13 (11)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|flag_detector:flag_dec                                                                                                    ; flag_detector       ; work         ;
+;       |Overflow:overflow|                    ; 0.7 (0.7)            ; 0.7 (0.7)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (2)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |RegistroCargaTop|flag_detector:flag_dec|Overflow:overflow                                                                                  ; Overflow            ; work         ;
 +----------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1489,18 +1491,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; seleccion_aux[2] ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; seleccion_aux[3] ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; clk              ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; rst              ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; rst              ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; seleccion[0]     ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; seleccion[1]     ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; seleccion[2]     ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; seleccion[3]     ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; a[3]             ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; b[3]             ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; a[3]             ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; b[3]             ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; b[2]             ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; b[1]             ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; b[1]             ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; a[2]             ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; a[1]             ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; a[0]             ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; a[1]             ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; a[0]             ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; b[0]             ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +------------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
@@ -1513,58 +1515,56 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; clk                                                       ;                   ;         ;
 ;      - clk~inputCLKENA0                                   ; 0                 ; 0       ;
 ; rst                                                       ;                   ;         ;
-;      - RegistroCargaInput:regCargaIn|saux[2]~_Duplicate_1 ; 1                 ; 0       ;
-;      - RegistroCargaInput:regCargaIn|saux[3]~_Duplicate_1 ; 1                 ; 0       ;
-;      - RegistroCargaInput:regCargaIn|saux[5]~_Duplicate_1 ; 1                 ; 0       ;
-;      - RegistroCargaInput:regCargaIn|saux[6]~_Duplicate_1 ; 1                 ; 0       ;
-;      - RegistroCargaInput:regCargaIn|saux[7]~_Duplicate_1 ; 1                 ; 0       ;
-;      - RegistroCargaInput:regCargaIn|saux[8]              ; 1                 ; 0       ;
-;      - RegistroCargaInput:regCargaIn|saux[9]              ; 1                 ; 0       ;
-;      - RegistroCargaInput:regCargaIn|saux[10]             ; 1                 ; 0       ;
-;      - RegistroCargaInput:regCargaIn|saux[11]             ; 1                 ; 0       ;
-;      - RegistroCargaOutput:regCargaOut|saux[0]            ; 1                 ; 0       ;
-;      - RegistroCargaOutput:regCargaOut|saux[1]            ; 1                 ; 0       ;
-;      - RegistroCargaOutput:regCargaOut|saux[2]            ; 1                 ; 0       ;
-;      - RegistroCargaOutput:regCargaOut|saux[3]            ; 1                 ; 0       ;
-;      - RegistroCargaOutput:regCargaOut|saux[5]            ; 1                 ; 0       ;
-;      - RegistroCargaOutput:regCargaOut|saux[6]            ; 1                 ; 0       ;
-;      - RegistroCargaOutput:regCargaOut|saux[7]            ; 1                 ; 0       ;
-;      - RegistroCargaOutput:regCargaOut|saux[8]            ; 1                 ; 0       ;
-;      - RegistroCargaInput:regCargaIn|saux[1]~_Duplicate_1 ; 1                 ; 0       ;
-;      - RegistroCargaInput:regCargaIn|saux[0]~_Duplicate_1 ; 1                 ; 0       ;
-;      - RegistroCargaInput:regCargaIn|saux[4]~_Duplicate_1 ; 1                 ; 0       ;
-;      - ALU:alu_|Multiplicacion:multiplicador|Mult0~mac    ; 1                 ; 0       ;
+;      - RegistroCargaInput:regCargaIn|saux[0]~_Duplicate_1 ; 0                 ; 0       ;
+;      - RegistroCargaInput:regCargaIn|saux[1]~_Duplicate_1 ; 0                 ; 0       ;
+;      - RegistroCargaInput:regCargaIn|saux[2]~_Duplicate_1 ; 0                 ; 0       ;
+;      - RegistroCargaInput:regCargaIn|saux[3]~_Duplicate_1 ; 0                 ; 0       ;
+;      - RegistroCargaInput:regCargaIn|saux[4]~_Duplicate_1 ; 0                 ; 0       ;
+;      - RegistroCargaInput:regCargaIn|saux[5]~_Duplicate_1 ; 0                 ; 0       ;
+;      - RegistroCargaInput:regCargaIn|saux[6]~_Duplicate_1 ; 0                 ; 0       ;
+;      - RegistroCargaInput:regCargaIn|saux[7]~_Duplicate_1 ; 0                 ; 0       ;
+;      - RegistroCargaInput:regCargaIn|saux[8]              ; 0                 ; 0       ;
+;      - RegistroCargaInput:regCargaIn|saux[9]              ; 0                 ; 0       ;
+;      - RegistroCargaInput:regCargaIn|saux[10]             ; 0                 ; 0       ;
+;      - RegistroCargaInput:regCargaIn|saux[11]             ; 0                 ; 0       ;
+;      - RegistroCargaOutput:regCargaOut|saux[0]            ; 0                 ; 0       ;
+;      - RegistroCargaOutput:regCargaOut|saux[1]            ; 0                 ; 0       ;
+;      - RegistroCargaOutput:regCargaOut|saux[2]            ; 0                 ; 0       ;
+;      - RegistroCargaOutput:regCargaOut|saux[3]            ; 0                 ; 0       ;
+;      - RegistroCargaOutput:regCargaOut|saux[5]            ; 0                 ; 0       ;
+;      - RegistroCargaOutput:regCargaOut|saux[6]            ; 0                 ; 0       ;
+;      - RegistroCargaOutput:regCargaOut|saux[7]            ; 0                 ; 0       ;
+;      - RegistroCargaOutput:regCargaOut|saux[8]            ; 0                 ; 0       ;
+;      - ALU:alu_|Multiplicacion:multiplicador|Mult0~mac    ; 0                 ; 0       ;
 ; seleccion[0]                                              ;                   ;         ;
 ;      - Button_Switch:button1|sAux                         ; 0                 ; 0       ;
 ; seleccion[1]                                              ;                   ;         ;
 ;      - Button_Switch:button2|sAux                         ; 1                 ; 0       ;
 ; seleccion[2]                                              ;                   ;         ;
 ;      - Button_Switch:button3|sAux                         ; 0                 ; 0       ;
-;      - Button_Switch:button3|sAux~DUPLICATE               ; 0                 ; 0       ;
 ; seleccion[3]                                              ;                   ;         ;
 ;      - Button_Switch:button4|sAux                         ; 0                 ; 0       ;
-;      - Button_Switch:button4|sAux~DUPLICATE               ; 0                 ; 0       ;
 ; a[3]                                                      ;                   ;         ;
-;      - RegistroCargaInput:regCargaIn|saux[3]~_Duplicate_1 ; 0                 ; 0       ;
-;      - ALU:alu_|Multiplicacion:multiplicador|Mult0~mac    ; 0                 ; 0       ;
+;      - RegistroCargaInput:regCargaIn|saux[3]~_Duplicate_1 ; 1                 ; 0       ;
+;      - ALU:alu_|Multiplicacion:multiplicador|Mult0~mac    ; 1                 ; 0       ;
 ; b[3]                                                      ;                   ;         ;
-;      - RegistroCargaInput:regCargaIn|saux[7]~_Duplicate_1 ; 0                 ; 0       ;
-;      - ALU:alu_|Multiplicacion:multiplicador|Mult0~mac    ; 0                 ; 0       ;
+;      - RegistroCargaInput:regCargaIn|saux[7]~_Duplicate_1 ; 1                 ; 0       ;
+;      - ALU:alu_|Multiplicacion:multiplicador|Mult0~mac    ; 1                 ; 0       ;
 ; b[2]                                                      ;                   ;         ;
 ;      - RegistroCargaInput:regCargaIn|saux[6]~_Duplicate_1 ; 0                 ; 0       ;
 ;      - ALU:alu_|Multiplicacion:multiplicador|Mult0~mac    ; 0                 ; 0       ;
 ; b[1]                                                      ;                   ;         ;
-;      - RegistroCargaInput:regCargaIn|saux[5]~_Duplicate_1 ; 1                 ; 0       ;
-;      - ALU:alu_|Multiplicacion:multiplicador|Mult0~mac    ; 1                 ; 0       ;
+;      - RegistroCargaInput:regCargaIn|saux[5]~_Duplicate_1 ; 0                 ; 0       ;
+;      - ALU:alu_|Multiplicacion:multiplicador|Mult0~mac    ; 0                 ; 0       ;
 ; a[2]                                                      ;                   ;         ;
 ;      - RegistroCargaInput:regCargaIn|saux[2]~_Duplicate_1 ; 0                 ; 0       ;
 ;      - ALU:alu_|Multiplicacion:multiplicador|Mult0~mac    ; 0                 ; 0       ;
 ; a[1]                                                      ;                   ;         ;
-;      - RegistroCargaInput:regCargaIn|saux[1]~_Duplicate_1 ; 0                 ; 0       ;
-;      - ALU:alu_|Multiplicacion:multiplicador|Mult0~mac    ; 0                 ; 0       ;
+;      - RegistroCargaInput:regCargaIn|saux[1]~_Duplicate_1 ; 1                 ; 0       ;
+;      - ALU:alu_|Multiplicacion:multiplicador|Mult0~mac    ; 1                 ; 0       ;
 ; a[0]                                                      ;                   ;         ;
-;      - RegistroCargaInput:regCargaIn|saux[0]~_Duplicate_1 ; 0                 ; 0       ;
-;      - ALU:alu_|Multiplicacion:multiplicador|Mult0~mac    ; 0                 ; 0       ;
+;      - RegistroCargaInput:regCargaIn|saux[0]~_Duplicate_1 ; 1                 ; 0       ;
+;      - ALU:alu_|Multiplicacion:multiplicador|Mult0~mac    ; 1                 ; 0       ;
 ; b[0]                                                      ;                   ;         ;
 ;      - RegistroCargaInput:regCargaIn|saux[4]~_Duplicate_1 ; 0                 ; 0       ;
 ;      - ALU:alu_|Multiplicacion:multiplicador|Mult0~mac    ; 0                 ; 0       ;
@@ -1576,12 +1576,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------+----------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; Name         ; Location ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +--------------+----------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; clk          ; PIN_AB12 ; 21      ; Clock        ; yes    ; Global Clock         ; GCLK1            ; --                        ;
+; clk          ; PIN_AB12 ; 21      ; Clock        ; yes    ; Global Clock         ; GCLK7            ; --                        ;
 ; rst          ; PIN_AC12 ; 21      ; Async. clear ; no     ; --                   ; --               ; --                        ;
 ; seleccion[0] ; PIN_AA14 ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
 ; seleccion[1] ; PIN_AA15 ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; seleccion[2] ; PIN_W15  ; 2       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; seleccion[3] ; PIN_Y16  ; 2       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; seleccion[2] ; PIN_W15  ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; seleccion[3] ; PIN_Y16  ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
 +--------------+----------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1590,7 +1590,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+----------+---------+----------------------+------------------+---------------------------+
 ; Name ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------+----------+---------+----------------------+------------------+---------------------------+
-; clk  ; PIN_AB12 ; 21      ; Global Clock         ; GCLK1            ; --                        ;
+; clk  ; PIN_AB12 ; 21      ; Global Clock         ; GCLK7            ; --                        ;
 +------+----------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1611,7 +1611,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------+-----------------+---------------+---------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+-----------------+--------------------------------+---------------------+-------------------------------+------------------------------+------------------------------+
 ; Name                                            ; Mode            ; Location      ; Sign Representation ; Data AX Input Register ; Data AY Input Register ; Data AZ Input Register ; Data BX Input Register ; Data BY Input Register ; Data BZ Input Register ; Output Register ; Dedicated Shift Register Chain ; Dedicated Pre-Adder ; Dedicated Coefficient Storage ; Dedicated Output Adder Chain ; Dedicated Output Accumulator ;
 +-------------------------------------------------+-----------------+---------------+---------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+-----------------+--------------------------------+---------------------+-------------------------------+------------------------------+------------------------------+
-; ALU:alu_|Multiplicacion:multiplicador|Mult0~mac ; Independent 9x9 ; DSP_X20_Y4_N0 ; Unsigned            ; yes                    ; yes                    ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; ALU:alu_|Multiplicacion:multiplicador|Mult0~mac ; Independent 9x9 ; DSP_X32_Y4_N0 ; Unsigned            ; yes                    ; yes                    ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
 +-------------------------------------------------+-----------------+---------------+---------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+-----------------+--------------------------------+---------------------+-------------------------------+------------------------------+------------------------------+
 
 
@@ -1620,14 +1620,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------+-------------------------+
 ; Routing Resource Type                       ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Block interconnects                         ; 196 / 289,320 ( < 1 % ) ;
-; C12 interconnects                           ; 13 / 13,420 ( < 1 % )   ;
-; C2 interconnects                            ; 51 / 119,108 ( < 1 % )  ;
-; C4 interconnects                            ; 35 / 56,300 ( < 1 % )   ;
+; Block interconnects                         ; 186 / 289,320 ( < 1 % ) ;
+; C12 interconnects                           ; 4 / 13,420 ( < 1 % )    ;
+; C2 interconnects                            ; 43 / 119,108 ( < 1 % )  ;
+; C4 interconnects                            ; 47 / 56,300 ( < 1 % )   ;
 ; DQS bus muxes                               ; 0 / 25 ( 0 % )          ;
 ; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )          ;
 ; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )          ;
-; Direct links                                ; 37 / 289,320 ( < 1 % )  ;
+; Direct links                                ; 38 / 289,320 ( < 1 % )  ;
 ; Global clocks                               ; 1 / 16 ( 6 % )          ;
 ; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )           ;
 ; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )           ;
@@ -1683,13 +1683,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )           ;
 ; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )          ;
 ; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )          ;
-; Local interconnects                         ; 49 / 84,580 ( < 1 % )   ;
+; Local interconnects                         ; 51 / 84,580 ( < 1 % )   ;
 ; Quadrant clocks                             ; 0 / 66 ( 0 % )          ;
-; R14 interconnects                           ; 64 / 12,676 ( < 1 % )   ;
-; R14/C12 interconnect drivers                ; 70 / 20,720 ( < 1 % )   ;
-; R3 interconnects                            ; 91 / 130,992 ( < 1 % )  ;
-; R6 interconnects                            ; 176 / 266,960 ( < 1 % ) ;
-; Spine clocks                                ; 2 / 360 ( < 1 % )       ;
+; R14 interconnects                           ; 57 / 12,676 ( < 1 % )   ;
+; R14/C12 interconnect drivers                ; 58 / 20,720 ( < 1 % )   ;
+; R3 interconnects                            ; 98 / 130,992 ( < 1 % )  ;
+; R6 interconnects                            ; 195 / 266,960 ( < 1 % ) ;
+; Spine clocks                                ; 1 / 360 ( < 1 % )       ;
 ; Wire stub REs                               ; 0 / 15,858 ( 0 % )      ;
 +---------------------------------------------+-------------------------+
 
@@ -1833,38 +1833,36 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; seleccion[1]    ; clk                  ; 7.5               ;
-; seleccion[3]    ; clk                  ; 7.3               ;
+; seleccion[3]    ; clk                  ; 7.4               ;
+; seleccion[1]    ; clk                  ; 7.2               ;
 ; seleccion[0]    ; clk                  ; 7.2               ;
-; seleccion[2]    ; clk                  ; 7.0               ;
+; seleccion[2]    ; clk                  ; 7.1               ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                                                    ;
-+----------------------------------------------------+-----------------------------------------+-------------------+
-; Source Register                                    ; Destination Register                    ; Delay Added in ns ;
-+----------------------------------------------------+-----------------------------------------+-------------------+
-; Button_Switch:button2|sAux                         ; RegistroCargaInput:regCargaIn|saux[9]   ; 7.457             ;
-; Button_Switch:button4|sAux                         ; RegistroCargaInput:regCargaIn|saux[11]  ; 7.349             ;
-; Button_Switch:button1|sAux                         ; RegistroCargaInput:regCargaIn|saux[8]   ; 7.246             ;
-; Button_Switch:button3|sAux                         ; RegistroCargaInput:regCargaIn|saux[10]  ; 7.039             ;
-; RegistroCargaInput:regCargaIn|saux[9]              ; RegistroCargaOutput:regCargaOut|saux[8] ; 0.289             ;
-; RegistroCargaInput:regCargaIn|saux[10]             ; RegistroCargaOutput:regCargaOut|saux[8] ; 0.235             ;
-; RegistroCargaInput:regCargaIn|saux[8]              ; RegistroCargaOutput:regCargaOut|saux[5] ; 0.118             ;
-; RegistroCargaInput:regCargaIn|saux[3]~_Duplicate_1 ; RegistroCargaOutput:regCargaOut|saux[5] ; 0.077             ;
-; RegistroCargaInput:regCargaIn|saux[0]~_Duplicate_1 ; RegistroCargaOutput:regCargaOut|saux[5] ; 0.063             ;
-+----------------------------------------------------+-----------------------------------------+-------------------+
-Note: This table only shows the top 9 path(s) that have the largest delay added for hold.
++------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                        ;
++----------------------------------------+-----------------------------------------+-------------------+
+; Source Register                        ; Destination Register                    ; Delay Added in ns ;
++----------------------------------------+-----------------------------------------+-------------------+
+; Button_Switch:button4|sAux             ; RegistroCargaInput:regCargaIn|saux[11]  ; 7.391             ;
+; Button_Switch:button2|sAux             ; RegistroCargaInput:regCargaIn|saux[9]   ; 7.169             ;
+; Button_Switch:button1|sAux             ; RegistroCargaInput:regCargaIn|saux[8]   ; 7.152             ;
+; Button_Switch:button3|sAux             ; RegistroCargaInput:regCargaIn|saux[10]  ; 7.137             ;
+; RegistroCargaInput:regCargaIn|saux[9]  ; RegistroCargaOutput:regCargaOut|saux[6] ; 0.111             ;
+; RegistroCargaInput:regCargaIn|saux[10] ; RegistroCargaOutput:regCargaOut|saux[6] ; 0.084             ;
+; RegistroCargaInput:regCargaIn|saux[11] ; RegistroCargaOutput:regCargaOut|saux[6] ; 0.063             ;
++----------------------------------------+-----------------------------------------+-------------------+
+Note: This table only shows the top 7 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (119006): Selected device 5CSEMA5F31C6 for design "Problema_2"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -1888,36 +1886,36 @@ Info (332130): Timing requirements not specified -- quality metrics such as perf
 Info (176235): Finished register packing
     Extra Info (176218): Packed 8 registers into blocks of type DSP block
     Extra Info (176220): Created 8 register duplicates
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:22
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:14
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:02
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:04
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:03
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X22_Y0 to location X32_Y10
+    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X33_Y0 to location X44_Y10
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:07
-Info (11888): Total time spent on timing analysis during the Fitter is 0.80 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:05
+Info (11888): Total time spent on timing analysis during the Fitter is 0.64 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:06
-Info (144001): Generated suppressed messages file C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/output_files/Problema_2.fit.smsg
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:04
+Info (144001): Generated suppressed messages file C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Problema_2/output_files/Problema_2.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 6567 megabytes
-    Info: Processing ended: Mon Sep 05 19:42:54 2022
-    Info: Elapsed time: 00:01:12
-    Info: Total CPU time (on all processors): 00:01:55
+    Info: Peak virtual memory: 6979 megabytes
+    Info: Processing ended: Tue Sep 06 10:33:29 2022
+    Info: Elapsed time: 00:00:50
+    Info: Total CPU time (on all processors): 00:02:09
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/Lenovo/Documents/GitHub/Lab03_TallerDisenio/Problema_2/output_files/Problema_2.fit.smsg.
+The suppressed messages can be found in C:/Users/Usuario/Documents/GitHub/Lab03_TallerDisenio/Problema_2/output_files/Problema_2.fit.smsg.
 
 

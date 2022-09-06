@@ -8,6 +8,7 @@ module RegistroCargaTop #(parameter N=4) (input[N-1:0] a, b, input [3:0] selecci
 	logic [N-1:0] b_aux;
 	logic [3:0] selec_aux;
 	logic [N:0] salida;
+	logic [N:0] s;
    //resultados
 	logic [N:0] rSum, rRest, rMod, rMult, rDiv, rAnd, rOr, rXor, rLShift, rRShift;
 	
@@ -29,10 +30,10 @@ module RegistroCargaTop #(parameter N=4) (input[N-1:0] a, b, input [3:0] selecci
 	//ALU
 	ALU #(.N(4)) alu_(a_aux, b_aux, rSum, rRest, rMod, rMult, rDiv, rAnd, rOr, rXor, rLShift, rRShift);
 	Mux #(.N(4)) mux_(rSum, rRest, rMod, rMult, rDiv, rAnd, rOr, rXor, rLShift, rRShift, selec_aux , salidaALU);
-	flag_detector flag_dec(selec_aux, a_aux[N-1], b_aux[N-1], salidaALU, flags_aux);
+	flag_detector flag_dec(selec_aux, a_aux[N-1], b_aux[N-1], salidaALU, flags_aux, s);
 	
 	//Creacion del Registro oUTPUT
-	RegistroCargaOutput regCargaOut(salidaALU, flags_aux,clk, rst, sRegOutput);
+	RegistroCargaOutput regCargaOut(s, flags_aux,clk, rst, sRegOutput);
 	
 	//Representarlo en la FPGA
 	assign salida = sRegOutput[N:0];

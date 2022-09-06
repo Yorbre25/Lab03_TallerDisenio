@@ -1,12 +1,12 @@
-Fitter Status : Successful - Mon Sep 05 19:42:52 2022
+Fitter Status : Successful - Tue Sep 06 10:33:28 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : Problema_2
 Top-level Entity Name : RegistroCargaTop
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 56 / 32,070 ( < 1 % )
-Total registers : 26
+Logic utilization (in ALMs) : 59 / 32,070 ( < 1 % )
+Total registers : 24
 Total pins : 29 / 457 ( 6 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 4,065,280 ( 0 % )

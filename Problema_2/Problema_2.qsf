@@ -98,7 +98,7 @@ set_location_assignment PIN_AF10 -to b[1]
 set_location_assignment PIN_AF9 -to b[0]
 set_location_assignment PIN_AB12 -to clk
 set_location_assignment PIN_AC12 -to rst
-set_location_assignment PIN_Y21 -to flags[3]
+set_location_assignment PIN_AD27 -to flags[3]
 set_location_assignment PIN_W21 -to flags[2]
 set_location_assignment PIN_W20 -to flags[1]
 set_location_assignment PIN_Y19 -to flags[0]
