@@ -64,11 +64,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "b[3]",
+					"strict" : false
+				},
+				{
+					"name" : "a[3]",
+					"strict" : false
+				},
+				{
 					"name" : "b[2]",
 					"strict" : false
 				},
 				{
-					"name" : "b[3]",
+					"name" : "b[1]",
 					"strict" : false
 				},
 				{
@@ -80,14 +88,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "a[3]",
-					"strict" : false
-				},
-				{
-					"name" : "b[1]",
-					"strict" : false
-				},
-				{
 					"name" : "a[0]",
 					"strict" : false
 				},
@@ -96,7 +96,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "seleccion[2]",
+					"name" : "seleccion[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seleccion[3]",
 					"strict" : false
 				},
 				{
@@ -104,11 +108,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "seleccion[0]",
-					"strict" : false
-				},
-				{
-					"name" : "seleccion[3]",
+					"name" : "seleccion[2]",
 					"strict" : false
 				}
 			]

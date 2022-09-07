@@ -1,6 +1,6 @@
 module Calcu #(parameter N=4)(input [N-1:0] a,input [N-1:0] b, input [3:0] seleccion, output[6:0] outDisplay, output [3:0] flags, output [3:0] seleccion_aux);
 //module Calcu #(parameter N=4)(input [N-1:0] a,input [N-1:0] b, input [3:0] seleccion, output[N-1:0] salida, output [3:0] flags);
-	logic [N:0] salida;
+	logic [N:0] salida, s;
 	//logic [3:0] seleccion_aux
 //	resultados
 	logic [N:0] rSum, rRest, rMod, rMult, rDiv, rAnd, rOr, rXor, rLShift, rRShift;
@@ -12,8 +12,8 @@ module Calcu #(parameter N=4)(input [N-1:0] a,input [N-1:0] b, input [3:0] selec
 	
 	ALU #(.N(4)) alu1(a, b, rSum, rRest, rMod, rMult, rDiv, rAnd, rOr, rXor, rLShift, rRShift);
 	Mux #(.N(4)) mux1(rSum, rRest, rMod, rMult, rDiv, rAnd, rOr, rXor, rLShift, rRShift, seleccion_aux, salida);
+	flag_detector flag_dec(seleccion_aux, a[N-1], b[N-1], salida, flags, s);
+	DisplayHex display2(s[3], s[2], s[1], s[0], outDisplay);
 	
-	DisplayHex display2(salida[3], salida[2], salida[1], salida[0], outDisplay);
-	flag_detector flag_dec(seleccion_aux, a[N-1], b[N-1], salida, flags);
 	
 endmodule 
