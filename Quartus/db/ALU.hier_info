@@ -11,21 +11,21 @@ seleccion[0] => seleccion[0].IN1
 seleccion[1] => seleccion[1].IN1
 seleccion[2] => seleccion[2].IN1
 seleccion[3] => seleccion[3].IN1
-outDisplay[0] <= DisplayHex:display2.port4
-outDisplay[1] <= DisplayHex:display2.port4
-outDisplay[2] <= DisplayHex:display2.port4
-outDisplay[3] <= DisplayHex:display2.port4
-outDisplay[4] <= DisplayHex:display2.port4
-outDisplay[5] <= DisplayHex:display2.port4
-outDisplay[6] <= DisplayHex:display2.port4
-flags[0] <= flag_detector:flag_dec.port4
-flags[1] <= flag_detector:flag_dec.port4
-flags[2] <= flag_detector:flag_dec.port4
-flags[3] <= flag_detector:flag_dec.port4
-seleccion_aux[0] <= seleccion_aux[0].DB_MAX_OUTPUT_PORT_TYPE
-seleccion_aux[1] <= seleccion_aux[1].DB_MAX_OUTPUT_PORT_TYPE
-seleccion_aux[2] <= seleccion_aux[2].DB_MAX_OUTPUT_PORT_TYPE
-seleccion_aux[3] <= seleccion_aux[3].DB_MAX_OUTPUT_PORT_TYPE
+outDisplay[0] << DisplayHex:display2.port4
+outDisplay[1] << DisplayHex:display2.port4
+outDisplay[2] << DisplayHex:display2.port4
+outDisplay[3] << DisplayHex:display2.port4
+outDisplay[4] << DisplayHex:display2.port4
+outDisplay[5] << DisplayHex:display2.port4
+outDisplay[6] << DisplayHex:display2.port4
+flags[0] << flag_detector:flag_dec.port4
+flags[1] << flag_detector:flag_dec.port4
+flags[2] << flag_detector:flag_dec.port4
+flags[3] << flag_detector:flag_dec.port4
+seleccion_aux[0] << seleccion_aux[0].DB_MAX_OUTPUT_PORT_TYPE
+seleccion_aux[1] << seleccion_aux[1].DB_MAX_OUTPUT_PORT_TYPE
+seleccion_aux[2] << seleccion_aux[2].DB_MAX_OUTPUT_PORT_TYPE
+seleccion_aux[3] << seleccion_aux[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Calcu|Button_Switch:button1

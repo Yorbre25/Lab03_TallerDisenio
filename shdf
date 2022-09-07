@@ -1,0 +1,19 @@
+module fun_H( M0, M1, M2, P, R, H);
+    input M0;  
+    input M1; 
+    input M2; 
+    input P; 
+    input R; 
+    output H; 
+
+    wire [3:0] N; 
+
+    and 
+    g0(N[0], M2, R);
+    g0(N[1], M1, P);
+    g0(N[2], M0, R);
+    g0(N[3], M0, P);
+
+    or
+    go(H,N[0],N[1],N[2],N[3]);
+endmodule;

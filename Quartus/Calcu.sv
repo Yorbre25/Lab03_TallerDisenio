@@ -1,7 +1,7 @@
 module Calcu #(parameter N=4)(input [N-1:0] a,input [N-1:0] b, input [3:0] seleccion, output[6:0] outDisplay, output [3:0] flags, output [3:0] seleccion_aux);
 //module Calcu #(parameter N=4)(input [N-1:0] a,input [N-1:0] b, input [3:0] seleccion, output[N-1:0] salida, output [3:0] flags);
 	logic [N:0] salida, s;
-	//logic [3:0] seleccion_aux
+//	logic [3:0] seleccion_aux
 //	resultados
 	logic [N:0] rSum, rRest, rMod, rMult, rDiv, rAnd, rOr, rXor, rLShift, rRShift;
 	
